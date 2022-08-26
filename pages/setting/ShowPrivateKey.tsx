@@ -122,7 +122,7 @@ export default function ({ navigation } : any) {
 				>
 					<Content style={gstyle.textLight}>Your Private Key provides full access to your account and funds</Content>
 					<Content style={gstyle.label}>Do not share this with anyone.</Content>
-					<Content style={gstyle.textLight}>NeonWallet Support will not request this,</Content>
+					<Content style={gstyle.textLight}>ICICBWallet Support will not request this,</Content>
 					<Wrap style={grid.gridMargin2}>
 						<Content style={gstyle.link}>but phishers might.</Content>
 					</Wrap>

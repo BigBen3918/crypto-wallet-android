@@ -73,7 +73,7 @@ export default function ({route, navigation }: any) {
 						</OpacityButton>
 					</Wrap>
 					<OpacityButton onPress={() => updateStatus({showModal1: true})}>
-						<Content style={{...gstyle.link, ...gstyle.textCenter, marginBottom: h(1)}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Why is this important?</Content>
+						<Content style={{...gstyle.link, ...gstyle.textCenter, marginBottom: h(1)}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})}}>Why is this important?</Content>
 					</OpacityButton>
 					<Wrap style={grid.panel}>
 						<Content style={gstyle.textLightLgCenter}>MANUAL</Content>
@@ -125,7 +125,7 @@ export default function ({route, navigation }: any) {
 								<Content style={gstyle.textLightCenter}>Don’t risk losing your funds. Protect your wallet by saving your Secret Recovery Phrase in a place you trust. <Content>It’s the only way to recover your wallet if you get locked out of the app or get a new device.</Content></Content>
 							</Wrap>
 							<Wrap style={{...grid.rowCenterCenter, ...grid.gridMargin2}}>
-								<OpacityButton onPress={goNext}><Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content></OpacityButton>
+								<OpacityButton onPress={goNext}><Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})}}>Learn more</Content></OpacityButton>
 							</Wrap>
 						</Wrap>
 					</Wrap>

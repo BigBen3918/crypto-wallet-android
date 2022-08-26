@@ -24,7 +24,7 @@ export default function ({ navigation }: any) {
 					</Wrap>
 				</>
 			}
-			title="Neon Wallet Support"
+			title="ICICB Wallet Support"
 			footer={(
 				<Wrap style={{...grid.rowCenterBetween, marginTop: h(2)}}>
 					<Wrap style={{...grid.rowCenterBetween, ...grid.gridMargin2}}>
@@ -36,7 +36,7 @@ export default function ({ navigation }: any) {
 			)}
 		>
 			<Content style={gstyle.textLightCenter}>
-				<Content style={gstyle.link}>NEON WALLET</Content> / PRIVACY POLICY
+				<Content style={gstyle.link}>ICICB WALLET</Content> / PRIVACY POLICY
 			</Content>
 			<ImageInput 
 				icon={<Icon.Search color={colors.danger} />} 
@@ -45,7 +45,7 @@ export default function ({ navigation }: any) {
 				}}
 			/>
 			<Wrap>
-				<Content style={gstyle.textLightLgCenter}>Basic Safety and Security Tips for Neon Wallet</Content>
+				<Content style={gstyle.textLightLgCenter}>Basic Safety and Security Tips for ICICB Wallet</Content>
 				<Content style={gstyle.textLightSmCenter}>Updated 1 month ago</Content>
 				<Content style={gstyle.textLightLg}>What is a Secret Recovery Phrase and how do I back it up</Content>
 				<Content style={gstyle.textLight}>The use of a seed phrase, or Secret Recovery Phrase, is a standard most crypto wallets use. It's generated randomly when you create your...</Content>

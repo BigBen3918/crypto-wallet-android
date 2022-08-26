@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "neon-wallet-app",
+    "name": "icicb-wallet-app",
     "description": "your app desc",
-    "slug": "neon-wallet-app",
+    "slug": "icicb-wallet-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/splash.png",
@@ -23,7 +23,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "neonwalletapp.com",
+      "package": "icicbwalletapp.com",
       "adaptiveIcon": {
         "foregroundImage": "./assets/splash.png",
         "backgroundColor": "#000000"

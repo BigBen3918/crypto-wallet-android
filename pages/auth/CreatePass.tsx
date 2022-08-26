@@ -78,7 +78,7 @@ export default function ({  navigation }: any) {
 			}
 			title="Create Password"
 		>
-			<Content style={gstyle.textLightCenter}>This password will unlock your NeonwWallet only on this device</Content>
+			<Content style={gstyle.textLightCenter}>This password will unlock your ICICBWallet only on this device</Content>
 			<DefaultInput
 				label="New password"
 				inputProps={{
@@ -112,13 +112,13 @@ export default function ({  navigation }: any) {
 			<Wrap style={{alignSelf: "stretch", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
 				<Content style={gstyle.labelWhite}>Remember me</Content>
 				<Wrap style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
-					<Wrap><Switch thumbColor={colors.warning} onChange={() => updateStatus({isRemember: !status.isRemember})} value={status.isRemember} /></Wrap>
+					<Wrap><Switch thumbColor={colors.color} onChange={() => updateStatus({isRemember: !status.isRemember})} value={status.isRemember} /></Wrap>
 					<Content  style={gstyle.labelWhite}>{status.isRemember ? "ON": "OFF"}</Content>
 				</Wrap>
 			</Wrap>
 			<Wrap style={style.checkBox}>
-				<Checkbox status={status.isAccept ? "checked" : "unchecked"} color={colors.warning} uncheckedColor={colors.bgLight} onPress={() => updateStatus({isAccept: !status.isAccept})} />
-				<Content style={gstyle.labelWhite}>I understand that NeonWallet cannot recover this password for me. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content>.</Content>
+				<Checkbox status={status.isAccept ? "checked" : "unchecked"} color={colors.color} uncheckedColor={colors.color} onPress={() => updateStatus({isAccept: !status.isAccept})} />
+				<Content style={gstyle.labelWhite}>I understand that ICICBWallet cannot recover this password for me. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Learn more</Content>.</Content>
 			</Wrap>
 			<Wrap style={grid.btnGroup}>
 				<DefaultButton

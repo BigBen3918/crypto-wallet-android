@@ -225,7 +225,7 @@ export default function ({route, navigation }: any) {
 							</Wrap>
 						)}
 						<Wrap style={{marginBottom: h(10), display: "flex", alignItems: "center"}}>
-							<Content style={gstyle.labelWhite}>Need help? Contact <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>NeonWallet Support</Content></Content>
+							<Content style={gstyle.labelWhite}>Need help? Contact <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>ICICB wallet Support</Content></Content>
 						</Wrap>
 					</Wrap>
 				</Wrap>

@@ -35,7 +35,7 @@ export default function ({route, navigation }: any) {
 			</Wrap>
 			<Content style={gstyle.textLightCenter}>Don't risk losing your funds. Protect your wallet by saving your <Content style={gstyle.link}>Secret Recovery Phrase</Content> in a place you trust. It's the only way to recover your wallet if you get locked out of the app or get a new device.</Content>
 			<Wrap style={{marginTop: h(5), marginBottom: h(5)}}>
-				<Content style={{...gstyle.link, ...gstyle.textCenter}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Remind me later</Content>
+				<Content style={{...gstyle.link, ...gstyle.textCenter}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})}}>Remind me later</Content>
 				<Content style={gstyle.textLightSmCenter}>(Not recommended)</Content>
 			</Wrap>
 			<Wrap>

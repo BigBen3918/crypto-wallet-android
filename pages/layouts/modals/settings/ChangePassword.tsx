@@ -62,7 +62,7 @@ export default function ({close}: any) {
 
 	return (
 		<Modal close={close} title={"Change Password"}>
-			<Content style={{...gstyle.textCenter, ...gstyle.labelWhite, paddingTop: h(1)}}>This password will unlock your Neon Wallet only on this device.</Content>
+			<Content style={{...gstyle.textCenter, ...gstyle.labelWhite, paddingTop: h(1)}}>This password will unlock your ICICB Wallet only on this device.</Content>
 			<DefaultInput
 				visibleValue={true}
 				label={"Your password"}

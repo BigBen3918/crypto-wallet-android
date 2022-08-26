@@ -46,7 +46,7 @@ export default function ({ navigation }: any) {
 	}
 
 	const goTerms = () => { 
-		navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})
+		navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})
 	}
 
 	return (

@@ -15,7 +15,7 @@ export const authLayout = StyleSheet.create({
 	prev_btn: {
 	},
 	prev_icon: {
-		color: colors.warning
+		color: colors.color
 	},
 	container: {
 		flex: 1,
@@ -111,9 +111,11 @@ export const secretPhrase = StyleSheet.create({
 		...grid.rowCenter,
 		flex: 1,
 		marginBottom: h(1.5),
-		height: h(4),
+		height: h(6),
 		paddingLeft: w(5),
 		paddingRight: w(5),
+		paddingTop: h(1),
+		paddingBottom: h(1),
 		marginLeft: w(3),
 		marginRight: w(3),
 		borderWidth: w(0.2),

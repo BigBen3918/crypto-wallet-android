@@ -48,7 +48,7 @@ export default function ({ navigation }: any) {
 				<ScrollWrap style={{flex: 1, paddingLeft: w(5), paddingRight: w(5), paddingBottom: h(15)}}>
 					<Wrap style={grid.gridMargin4}>
 						<Content style={gstyle.textLight}>The Secret Recovery Phrase (SRP) gives full access to your wallet, funds and accounts.</Content>
-						<Content style={gstyle.textLight}>NeonWallet is a non-custodial wallet. That means, you are the owner of your SRP.</Content>
+						<Content style={gstyle.textLight}>ICICBWallet is a non-custodial wallet. That means, you are the owner of your SRP.</Content>
 					</Wrap>
 					<Wrap style={grid.gridMargin4}>
 						<Wrap style={grid.panel}>
@@ -56,7 +56,7 @@ export default function ({ navigation }: any) {
 								<Wrap style={{...grid.rowCenterCenter, width: w(10)}}>
 									<Icon.EyeInvisible color={colors.danger} width={w(7)} height={w(7)} />
 								</Wrap>
-								<Content style={{...gstyle.labelWhite, flex: 1}}>Make sure nobody is looking at your screen. NeonWallet Support will never request this.</Content>
+								<Content style={{...gstyle.labelWhite, flex: 1}}>Make sure nobody is looking at your screen. ICICBWallet Support will never request this.</Content>
 							</Wrap>
 						</Wrap>
 					</Wrap>
@@ -119,7 +119,7 @@ export default function ({ navigation }: any) {
 					title={"Keep your SRP safe"}
 				>
 					<Content style={gstyle.textLight}>Your Secret Recovery Phrase provides full access to your wallet and funds.</Content>
-					<Content style={gstyle.textLight}>Do you share this with anyone. NeonWallet Support will not request this,</Content>
+					<Content style={gstyle.textLight}>Do you share this with anyone. ICICBWallet Support will not request this,</Content>
 					<Wrap style={grid.gridMargin2}>
 						<Content style={gstyle.link}>but phishers might.</Content>
 					</Wrap>

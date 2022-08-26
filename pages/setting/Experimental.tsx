@@ -61,7 +61,7 @@ export default function ({ navigation }: any) {
 				<Wrap style={gstyle.hr2} />
 				<Wrap>
 					<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Enable Enchanced Gas Fee UI</Content>
-					<Content style={gstyle.textLight}>We’ve upgraded how gas estimation and customization works. Turn on if you’d like to use the new gas experience. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content></Content>
+					<Content style={gstyle.textLight}>We’ve upgraded how gas estimation and customization works. Turn on if you’d like to use the new gas experience. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Learn more</Content></Content>
 					<Wrap style={grid.rowCenter}>
 						<Wrap><Switch thumbColor={colors.warning} onChange={() => updateSetting("enhancedGasFeeUI", !setting.enhancedGasFeeUI)} value={setting.enhancedGasFeeUI} /></Wrap>
 						<Content  style={gstyle.labelWhite}>{setting.enhancedGasFeeUI ? "ON": "OFF"}</Content>

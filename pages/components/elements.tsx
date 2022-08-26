@@ -16,15 +16,15 @@ export const DefaultInput = ({ label, inputProps, visibleValue, children, warnin
 	let st2 = {
 		...gfont.t,
 		flex: 1,
-		color: colors.color,
+		color: colors.white,
 		height: h(8),
-		borderColor: colors.placeholder,
 		borderWidth: 1,
+		borderRadius: w(1),
 		paddingTop: h(2),
 		paddingBottom: h(2),
 		paddingRight: w(3),
 		paddingLeft: w(3),
-		backgroundColor: "rgba(150, 54, 245, 0.2)",
+		backgroundColor: "rgba(0,0,0, 0.8)",
 	};
 	Object.assign(st2, style)
 
@@ -33,6 +33,7 @@ export const DefaultInput = ({ label, inputProps, visibleValue, children, warnin
 			display: "flex",
 			justifyContent: "center",
 			marginBottom: h(4),
+			borderRadius: w(5)
 		}}>
 			<Wrap style={grid.rowCenterBetween}>
 				<Content style={gstyle.label}>{label}</Content>
@@ -66,7 +67,7 @@ export const ImageInput = ({ icon, inputProps, iconProps }
 			style={{
 				...grid.rowCenterCenter,
 				...grid.gridMargin2,
-				backgroundColor: colors.bgLight
+				backgroundColor: colors.color
 			}}
 		>
 			<Wrap
@@ -121,36 +122,49 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 			flex: 1,
 			maxWidth: block ? w(90) : (width ? w(width) : w(60)),
 			height: height ? h(height) : h(8),
-			paddingLeft: w(2),
-			paddingRight: w(2),
 			marginBottom: !hideMargin ? h(2): 0,
+			marginLeft: w(0.1),
+			marginRight: w(0.1),
+			borderWidth: w(0.2),
+			borderColor: colors.color,
+			shadowColor: colors.shadow,
+			shadowOffset: {
+				width: w(2),
+				height: h(2),
+			},
+			shadowOpacity: 1,
+			elevation: 5,
+			borderRadius: w(10)
 		}}>
 			<OpacityButton
 				style={{
 					...grid.rowCenterBetween,
 					flex: 1,
-					paddingLeft: w(1),
-					paddingRight: w(1),
-					paddingTop: h(1),
-					paddingBottom: h(1),
+					paddingLeft: w(0.6),
+					paddingRight: w(0.6),
+					paddingTop: h(0.6),
+					paddingBottom: h(0.6),
+					borderRadius: w(10),
+					shadowColor: colors.shadow,
+					shadowOffset: {
+						width: w(2),
+						height: h(2),
+					},
+					shadowOpacity: 1,
+	
+					elevation: 5,
 					backgroundColor: !btnProps?.disabled ? themeColors[theme].origin : themeColors[theme].disabled,
 				}}
 				{...btnProps}
 			>
-				{!btnProps?.disabled && (
-					<Wrap style={{ alignSelf: "stretch", width: w(1), backgroundColor: colors.bgLight }} />
-				)}
 				<Content style={{
 					...gfont.t,
 					flex: 1,
-					color: !btnProps?.disabled ? themeColors[theme].color : themeColors[theme].origin,
+					color: !btnProps?.disabled ? themeColors[theme].color : "#888",
 					textAlign: "center"
 				}}>
 					{children}
 				</Content>
-				{!btnProps?.disabled && (
-					<Wrap style={{ alignSelf: "stretch", width: w(1), backgroundColor: colors.bgLight }} />
-				)}
 			</OpacityButton>
 		</Wrap>
 	)
@@ -168,7 +182,7 @@ export const FunctionalButton = ({ label, children, btnProps }
 					...grid.rowCenterCenter,
 					width: w(15),
 					height: h(8),
-					backgroundColor: colors.bgLight,
+					backgroundColor: colors.color,
 					marginBottom: h(1),
 					borderTopLeftRadius: w(2),
 					borderBottomRightRadius: w(2),
@@ -211,13 +225,13 @@ export const Stepper = ({data, step}
 							style={{
 								...stepper.stepBox,
 								borderColor: (k <= step) ? colors.warning : colors.bgButton,
-								backgroundColor: (k < step) ? colors.warning : colors.bgLight
+								backgroundColor: (k < step) ? colors.warning : colors.color
 							}}
 						>
 							<Content 
 								style={{
 									...stepper.stepContent,
-									color: (k < step) ? colors.bgButton : ((k >= step ? colors.color : colors.placeholder))
+									color: (k < step) ? colors.bgButton : ((k >= step ? colors.bgButton : colors.placeholder))
 								}}
 							>
 								{k + 1}

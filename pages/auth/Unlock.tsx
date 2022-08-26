@@ -2,8 +2,8 @@ import React from "react"
 import { Switch } from "react-native-paper"
 import { colors, grid, gstyle, h, w } from "../components/style"
 import { DefaultButton, DefaultInput, Modal } from "../components/elements"
-import { BgImage, Content, OpacityButton,  ScrollWrap, Wrap } from "../components/commons"
-import Icon from "../components/Icon"
+import { BgImage, Content, OpacityButton,  Picture,  ScrollWrap, Wrap } from "../components/commons"
+import Logo from '../../assets/logo.png'
 import {initialState} from '../../reducer'
 import  useStore, { decrypt, hmac } from '../../useStore'
 
@@ -55,7 +55,7 @@ export default function ({ navigation }: any) {
 						<Wrap style={{marginTop: h(10)}}>
 							<Wrap style={gstyle.subContainer}>
 								<Wrap style={{alignSelf: "center"}}>
-									<Icon.SmLogo width={w(20)} height={w(20)} />
+									<Picture source={Logo} style={{width:w(25), height:w(10)}}/>				
 								</Wrap>
 								<Content style={gstyle.title}>Welcome Back!</Content>
 								<DefaultInput
@@ -98,7 +98,7 @@ export default function ({ navigation }: any) {
 					<Wrap style={{paddingRight: w(5), paddingLeft: w(5)}}>
 						<Content style={gstyle.textLightCenter}>Your current wallet, accounts and assets will be <Content style={gstyle.bold}>removed from this app permanently</Content>. This action cannot be undone.</Content>
 					</Wrap>
-					<Content style={gstyle.textLightCenter}>You can ONLY recover this wallet with your <Content style={gstyle.bold}>Secret Recovery Phrase</Content> NeonWallet does not have your Secret Recovery Phrase.</Content>
+					<Content style={gstyle.textLightCenter}>You can ONLY recover this wallet with your <Content style={gstyle.bold}>Secret Recovery Phrase</Content> ICICBWallet does not have your Secret Recovery Phrase.</Content>
 					<Wrap style={grid.btnGroup}>
 						<DefaultButton btnProps={{onPress:() => {updateStatus({showRemoveWalletWarning: false})}}}>Cancel</DefaultButton>
 						<DefaultButton theme="danger" btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>

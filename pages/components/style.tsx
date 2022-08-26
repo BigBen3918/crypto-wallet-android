@@ -7,39 +7,32 @@ export const w = (w: number) => wp(w + '%')
 export const h = (h: number) => hp(h + '%')
 
 export const colors = {
-	bgBody: "#23024d",
-	bgSecondary: "#170330",
-	bgButton: "#9428FF",
+	bgSecondary: "rgba(0,0,0, 0.9)",
+	bgButton: "#230603",
 	bgOpacity: "rgba(0, 0, 0, 0.505)",
+	bgLight: "rgba(0, 0, 0, 0.6)",
+	bgModal: "rgba(0,0,0, 0.9)",
 	bg: "rgba(0, 0, 0, 0.605)",
-	bgDisable: "#530E98",
-	bgLight: "#471189",
-	bgModal: "#380773f5",
+	bgDisable: "#130806",
 	warning: "#B7E02D",
 	danger: "#FF0677",
-
-	color: "#FFFFFF",
-	colorDisable: "#D1B1F3",
+	black: "black",
+	white: "#ffffff",
+	color: "#e9ad56",
+	colorDisable: "#888",
 
 	border: "rgba(255, 255, 255, 0.1)",
-
-	placeholder: "#6E3D9E"
+	shadow: "#e6a54b",
+	placeholder: "#666"
 }
 
 export const textColor = {
-	white: { color: colors.color },
+	white: { color: colors.white },
 	primary: { color: colors.bgButton },
 	warning: { color: colors.warning },
 	danger: { color: colors.danger }
 }
 
-export const loadFont = async () => {
-	if(!Font.isLoaded("Chakra")) {
-		await Font.loadAsync({ 
-			Chakra: require('../../assets/fonts/chakra-petch-v9-latin-regular.ttf')
-		});
-	}
-}
 
 
 const getFontFamily =  () => {
@@ -175,7 +168,6 @@ export const gstyle = StyleSheet.create({
 	body: {
 		minHeight: h(100),
 		minWidth: w(100)
-		// backgroundColor: colors.bgBody
 	},
 	container: {
 		flex: 1,
@@ -217,7 +209,7 @@ export const gstyle = StyleSheet.create({
 	label: {
 
 		...gfont.t,
-		color: colors.color,
+		color: colors.white,
 		marginBottom: h(1)
 	},
 	labelWhite: {

@@ -16,21 +16,21 @@ export default function ({ navigation }: any) {
 
 	return (
 		<AuthLayout
-			title="Help us improve neonwallet"
+			title="Help us improve ICICBWallet"
 			onBack={goBack}
 			footer={(
 				<>
 					<Wrap style={gstyle.hr} />
 					<Wrap style={grid.btnGroup}>
 						<DefaultButton btnProps={{onPress: submit}}>No Thanks</DefaultButton>
-						<DefaultButton btnProps={{onPress: submit}}>I Agree</DefaultButton>
+						<DefaultButton theme="warning" btnProps={{onPress: submit}}>I Agree</DefaultButton>
 					</Wrap>
 				</>
 			)}
 		>
 			<Wrap>
-				<Content style={gstyle.textLight}>Meta Mask would like to gather basic usage data to better understand how our users interact with the mobile app. This data will be used to continually improve the usability and user experience of our product.</Content>
-				<Content style={gstyle.textLight}>Meta Mask will...</Content>
+				<Content style={gstyle.textLight}>ICICB Wallet would like to gather basic usage data to better understand how our users interact with the mobile app. This data will be used to continually improve the usability and user experience of our product.</Content>
+				<Content style={gstyle.textLight}>ICICB Wallet will...</Content>
 				<Wrap>
 					<Wrap style={gstyle.listItem}>
 						<Wrap style={{marginTop: h(-1.5)}}>
@@ -70,7 +70,7 @@ export default function ({ navigation }: any) {
 					</Wrap>
 				</Wrap>
 				<Wrap style={gstyle.hr} />
-				<Content style={gstyle.textLight}>This data is aggregated and is therefore anonymous for the purposes of General Data Protection Regulation (EU) 2016/679. For more information in relation to our privacy practices, please see our <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Privacy Policy</Content> here. </Content>
+				<Content style={gstyle.textLight}>This data is aggregated and is therefore anonymous for the purposes of General Data Protection Regulation (EU) 2016/679. For more information in relation to our privacy practices, please see our <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Privacy Policy</Content> here. </Content>
 			</Wrap>
 		</AuthLayout>
 	);

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'; 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const appKey = 'neon-store-1.0';
+const appKey = 'icicb-app-store-1.0';
 
 export const  initialState: StoreObject = {
 	inited:				false,
@@ -50,7 +50,7 @@ export const getData = async () => {
 
 
 export default createSlice({
-	name: 'neon-wallet-app',
+	name: 'icicb-wallet-app',
 	initialState,
 	reducers: {
 		update: (state:any, action:any) => {

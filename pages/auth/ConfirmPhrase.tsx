@@ -84,7 +84,7 @@ export default function ({route,  navigation }: any) {
 			title="Confirm secret recovery phrase"
 		>
 			<Content style={gstyle.textLightCenter}>Select each word in the order it was presented to you.</Content>
-			<Wrap style={{...grid.panel, backgroundColor: colors.bgSecondary}}>
+			<Wrap style={{...grid.panel}}>
 				<Wrap style={grid.rowCenter}>
 					{status.mnemonic.map((i:string, k: number) => {
 						if((k % 6) === 0)
@@ -103,7 +103,7 @@ export default function ({route,  navigation }: any) {
 													borderWidth: w(0.2),
 													borderRadius: w(2),
 													borderStyle: status.selectedItems[k + kk] !== "" ? "solid" : "dashed",
-													borderColor: (status.selectedItems[k + kk] !== "" || status.focusIndex === k + kk) ? colors.warning : colors.bgButton
+													borderColor: (status.selectedItems[k + kk] !== "" || status.focusIndex === k + kk) ? colors.warning : colors.bgSecondary
 												}}
 											>
 												<Content style={gstyle.labelWhite}>{status.selectedItems.length >= (k + kk + 1) ? status.selectedItems[k + kk] : ""}</Content>
@@ -132,15 +132,17 @@ export default function ({route,  navigation }: any) {
 													alignItems: "center",
 													justifyContent: "center",
 													width: w(25),
-													height: h(4),
-													backgroundColor: status.selectedItems.indexOf(ii) !== -1 ? colors.bgSecondary : colors.bgModal,
+													height: h(6),
+													paddingTop: h(1),
+													paddingBottom: h(1),
+													backgroundColor: status.selectedItems.indexOf(ii) !== -1 ? colors.bgModal : colors.bgLight,
 													borderWidth: w(0.2),
 													borderRadius: w(2),
-													borderColor: colors.bgButton
+													borderColor: status.selectedItems.indexOf(ii) !== -1 ? "transparent" : colors.color,
 												}} 
 												onPress={() => pressWord(ii, k+kk)}
 											>
-												<Content style={gstyle.labelWhite}>{ii}</Content>
+												<Content style={{color: status.selectedItems.indexOf(ii) !== -1 ? colors.color : colors.white}}>{ii}</Content>
 											</OpacityButton>
 										))}
 									</Wrap>

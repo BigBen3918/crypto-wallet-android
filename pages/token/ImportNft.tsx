@@ -143,7 +143,7 @@ export default function ({ navigation }: any) {
 							<Content style={gstyle.label}>
 								<Content style={{fontWeight: "700"}}>NFT detection</Content>
 							</Content>
-							<Content style={gstyle.label}>Allow NeonWallet to automatically detect NFTs from OpenSea and display in your Neon Wallet.</Content>
+							<Content style={gstyle.label}>Allow ICICBWallet to automatically detect NFTs from OpenSea and display in your ICICB Wallet.</Content>
 							<Content  style={gstyle.link}>
 								<Content style={{fontWeight: "700"}}>Turn on NFT detection in Setting</Content>
 							</Content>

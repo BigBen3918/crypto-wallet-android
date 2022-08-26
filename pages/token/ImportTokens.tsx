@@ -229,9 +229,9 @@ export default function ({ navigation }: any) {
 															<Picture source={Coins} />
 														</Wrap>
 														<Wrap style={grid.rowCenterCenter}>
-															<Content style={{...gstyle.textLightCenter, width: w(50)}}>Add the tokens you’ve aquired using NeonWallet</Content>
+															<Content style={{...gstyle.textLightCenter, width: w(50)}}>Add the tokens you’ve aquired using ICICBWallet</Content>
 														</Wrap>
-														<Content style={{...gstyle.link, ...gstyle.textCenter}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content> 
+														<Content style={{...gstyle.link, ...gstyle.textCenter}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Learn more</Content> 
 													</>
 												)}
 											</Wrap>
@@ -247,7 +247,7 @@ export default function ({ navigation }: any) {
 													<Icon.Exclamation color={colors.bgButton} />
 												</Wrap>
 												<Wrap style={{flex: 1}}>
-													<Content style={gstyle.labelWhite}>Anyone can create a token, including creating fake versions of existing tokens. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content>  about <Content>scams and security risks</Content></Content>
+													<Content style={gstyle.labelWhite}>Anyone can create a token, including creating fake versions of existing tokens. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Learn more</Content>  about <Content>scams and security risks</Content></Content>
 												</Wrap>
 											</Wrap>
 											<DefaultInput

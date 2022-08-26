@@ -1,4 +1,4 @@
-# neon-wallet-app
+# icicb-wallet-app
 # How to Install
 In the project directory, you can run on cmd for install:
 ```

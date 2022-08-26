@@ -42,7 +42,7 @@ export default function ({ route, navigation }: any) {
 			"value":{},
 			"tokens":{}
 		}];
-		update({vault: vault, accounts: {...accounts}, apps:{}, networks:[...DEFAULT_NETWORKS],   contacts:[], createdAccountLayer:1, currentAccount:wallet.publickey, currentNetwork:"neon", connects: [], connectHistory: [], setting: {
+		update({vault: vault, accounts: {...accounts}, apps:{}, networks:[...DEFAULT_NETWORKS],   contacts:[], createdAccountLayer:1, currentAccount:wallet.publickey, currentNetwork:"rinkeby", connects: [], connectHistory: [], setting: {
 				currency:			'USD',
 				isFiat: 			true,
 				identicon:			"jazzicons",
@@ -101,10 +101,10 @@ export default function ({ route, navigation }: any) {
 					<Content style={gstyle.linkCenter}>Leave yourself a hint?</Content>
 				</Wrap>
 				<Wrap style={grid.gridMargin2}>
-					<Content style={gstyle.textLightCenter}>Neon Wallet cannot recover your wallet should loseit. You can find your Secret Recovery Phrase inSettings {'>'} Secuity &amp; Privacy</Content>
+					<Content style={gstyle.textLightCenter}>ICICB Wallet cannot recover your wallet should loseit. You can find your Secret Recovery Phrase inSettings {'>'} Secuity &amp; Privacy</Content>
 				</Wrap>
 				<Wrap style={grid.gridMargin2}>
-				<Content style={{...gstyle.link, ...gstyle.textCenter}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content>
+				<Content style={{...gstyle.link, ...gstyle.textCenter}} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})}}>Learn more</Content>
 				</Wrap>
 				<Wrap style={grid.btnGroup}>
 					<DefaultButton btnProps={{onPress: submit}}><Content>Done</Content></DefaultButton>

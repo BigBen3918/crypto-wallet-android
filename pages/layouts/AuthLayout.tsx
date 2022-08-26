@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "../components/Icon"
-import Logo from '../../assets/logo.webp'
+import Logo from '../../assets/logo.png'
 import { gstyle, h, w } from "../components/style"
 import { authLayout as style } from "../components/StyledComponents"
 import { BgImage, Content, OpacityButton, Picture, ScrollWrap, Wrap } from "../components/commons"

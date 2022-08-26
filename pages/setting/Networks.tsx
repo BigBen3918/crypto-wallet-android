@@ -348,7 +348,7 @@ export default function ({ navigation }: any) {
 					close={() => updateStatus({showDetailsModal: false})}
 				>
 					<Content style={gstyle.linkCenter}>{DEFAULT_IMPORT_NETWORKS[status.selectPopularIndex].label}</Content>
-					<Content style={gstyle.textLightCenter}>This allows this network to be used within NeonWallet</Content>
+					<Content style={gstyle.textLightCenter}>This allows this network to be used within ICICBWallet</Content>
 					<Wrap style={grid.panel}>
 						<Wrap style={grid.gridMargin2}>
 							<Content style={gstyle.textLight}>Display name</Content>

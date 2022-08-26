@@ -10,7 +10,7 @@ export const LoadScreen = () => {
 					<Wrap style={{marginTop:h(20)}}> 
 							<Icon.SmLogo width={w(20)} height={w(20)} />
 					</Wrap>
-					<Content style={gstyle.title}>Neon Wallet</Content>
+					<Content style={gstyle.title}>ICICB Wallet</Content>
 				</Wrap>
 			</Wrap>
 }

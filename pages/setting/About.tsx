@@ -21,33 +21,33 @@ export default function ({ navigation }: any) {
 		>
 			<Wrap style={{paddingRight: w(5), paddingLeft: w(5)}}>
 				<Wrap>
-					<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>NeonWallet Version</Content>
+					<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>ICICBWallet Version</Content>
 					<Content style={gstyle.textLight}>1.0.0</Content>
-					<Content style={gstyle.textLight}>NeonWallet is designed and built around the world.</Content>
+					<Content style={gstyle.textLight}>ICICBWallet is designed and built around the world.</Content>
 				</Wrap>
 				<Wrap style={gstyle.hr2} />
 				<Wrap>
 					<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>LINKS</Content>
 					<Wrap style={grid.gridMargin4}>
 						<Wrap style={grid.gridMargin2}>
-							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Privacy Policy</Content>
+							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Privacy Policy</Content>
 						</Wrap>
 						<Wrap style={grid.gridMargin2}>
-							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Terms of Use</Content>
+							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Terms of Use</Content>
 						</Wrap>
 						<Wrap style={grid.gridMargin2}>
-							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Attributions</Content>
+							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Attributions</Content>
 						</Wrap>
 					</Wrap>
 					<Wrap style={grid.gridMargin2}>
 						<Wrap style={grid.gridMargin2}>
-							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Visit our Support Center</Content>
+							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Visit our Support Center</Content>
 						</Wrap>
 						<Wrap style={grid.gridMargin2}>
-							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Visit our website</Content>
+							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Visit our website</Content>
 						</Wrap>
 						<Wrap style={grid.gridMargin2}>
-							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Contact us</Content>
+							<Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Contact us</Content>
 						</Wrap>
 					</Wrap>
 				</Wrap>

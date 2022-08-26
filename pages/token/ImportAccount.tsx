@@ -112,8 +112,8 @@ export default function ({ navigation }: any) {
 				onBack={goBack}
 			>
 				<Wrap style={{alignSelf: "center",width: w(90), paddingTop: h(3), paddingBottom: h(3)}}>
-					<Content style={gstyle.textLight}>Imported accounts are viewable in your wallet but are not recoverable with your NeonWallet Secret Recovery Phrase.</Content>
-					<Content style={gstyle.textLight}><Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})}}>Learn more</Content> about imported accounts here.</Content>
+					<Content style={gstyle.textLight}>Imported accounts are viewable in your wallet but are not recoverable with your ICICBWallet Secret Recovery Phrase.</Content>
+					<Content style={gstyle.textLight}><Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})}}>Learn more</Content> about imported accounts here.</Content>
 					<DefaultInput
 						label="Paste your private key string"
 						visibleValue={false}

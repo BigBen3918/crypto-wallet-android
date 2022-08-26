@@ -49,7 +49,6 @@ import Unlock 			from './pages/auth/Unlock'
 import Loading 			from './pages/components/loading'
 import WebView 			from './pages/token/WebView'
 import WalletConnect 	from './pages/token/WalletconnectCapture'
-import { loadFont } 	from './pages/components/style'
 import { checkBalances, checkNFT, waitTx, ZeroAddress } from './library/wallet'
 
 const store = configureStore({ reducer: Slice.reducer });
@@ -71,7 +70,6 @@ const AppContainer = () => {
 	});
 	const updateStatus = (params: {[key: string]: string | number | boolean | Blob | any }) => setStates({ ...state, ...params });
 	
-	loadFont()
 	LogBox.ignoreAllLogs();
 	console.warn = (args) => {}
 	// console.log = (args) => {}
@@ -233,7 +231,6 @@ const AppContainer = () => {
 				}
 			})
 		}
-		loadFont()
 	}, [])
 	
 	React.useEffect(()=>{

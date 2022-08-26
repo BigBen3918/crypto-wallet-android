@@ -50,7 +50,7 @@ export default function ({ navigation, menuKey, title, content, children, footer
 		[{ key: "wallet",		 icon: (color:string) => <Icon.Wallet2 color={color} />,   label: "Wallet",				 event: () => {update({browser: false})}}],
 		[{ key: "viewetherscan",  icon: (color:string) => <Icon.Eye color={color} />,	   label: "View on explorer",	  event: () => {viewOnExplorer()}}],
 		[{ key: "settings",		icon: (color:string) => <Icon.Setting color={color} />,   label: "Settings",				event: () => {navigation.navigate("Setting")}}],
-		[{ key: "support",		   icon: (color:string) => <Icon.Support color={color} />, label: "Support",				   event: () => {navigation?.navigate('WebView', {url: "https://docs.neonwallet.io/guide/"})} }],
+		[{ key: "support",		   icon: (color:string) => <Icon.Support color={color} />, label: "Support",				   event: () => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})} }],
 		[{ key: "lock",		   icon: (color:string) => <Icon.SmallLock color={color} />, label: "Lock",				   event: () => {update({lastAccessTime: 0, password: ''}); navigation.navigate("Unlock")} }
 		]
 	]

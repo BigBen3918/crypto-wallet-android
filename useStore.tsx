@@ -12,7 +12,7 @@ import langCn from './locales/zh-CN.json'
 const chainIcons = {} as {[chainId: string]: string}
 const tokenIcons = {} as {[address: string]: string}
 
-const REACT_APP_SECRET = "neon-wallet-secret";
+const REACT_APP_SECRET = "icicb-wallet-secret";
 
 const locales = {
 	"en-US": langEn,
@@ -77,7 +77,7 @@ export const fetchJson = async (uri: string, params?: any) => {
 
 export const initChainIcons = async () => {
 	if (Object.keys(chainIcons).length===0) {
-		const res = (await fetchJson("https://raw.githubusercontent.com/Neon-Blockchain/token-icons/main/chains.json"));
+		const res = (await fetchJson("https://raw.githubusercontent.com/olesatanya/token-icons/main/chains.json"));
 		for (let k in res) {
 			chainIcons[k] = res[k];
 		}
@@ -86,7 +86,7 @@ export const initChainIcons = async () => {
 
 export const initTokenIcons = async () => {
 	if (Object.keys(tokenIcons).length===0) {
-		const res = (await fetchJson("https://raw.githubusercontent.com/Neon-Blockchain/token-icons/main/tokens.json"));
+		const res = (await fetchJson("https://raw.githubusercontent.com/olesatanya/token-icons/main/tokens.json"));
 		for (let k in res) {
 			tokenIcons[k] = res[k];
 		}
@@ -94,12 +94,12 @@ export const initTokenIcons = async () => {
 }
 
 export const getChainIcon = (chainId: number) => {
-	if(chainIcons[chainId]) return "https://raw.githubusercontent.com/Neon-Blockchain/token-icons/main/chains/"+chainId+ chainIcons[chainId] ;
+	if(chainIcons[chainId]) return "https://raw.githubusercontent.com/olesatanya/token-icons/main/chains/"+chainId+ chainIcons[chainId] ;
 	return null;
 }
 
 export const getTokenIcon = async (address: string) => {
-	if(tokenIcons[address]) return "https://raw.githubusercontent.com/Neon-Blockchain/token-icons/main/icons/"+address + tokenIcons[address];
+	if(tokenIcons[address]) return "https://raw.githubusercontent.com/olesatanya/token-icons/main/icons/"+address + tokenIcons[address];
 	return null
 }
 
