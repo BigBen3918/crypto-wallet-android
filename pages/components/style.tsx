@@ -13,7 +13,7 @@ export const colors = {
 	bgLight: "rgba(0, 0, 0, 0.6)",
 	bgModal: "rgba(0,0,0, 0.9)",
 	bg: "rgba(0, 0, 0, 0.605)",
-	bgDisable: "#130806",
+	bgDisable: "#efaf5f",
 	warning: "#B7E02D",
 	danger: "#FF0677",
 	black: "black",
@@ -21,7 +21,7 @@ export const colors = {
 	color: "#e9ad56",
 	colorDisable: "#888",
 
-	border: "rgba(255, 255, 255, 0.1)",
+	border: "rgba(255, 255, 255, 0.2)",
 	shadow: "#e6a54b",
 	placeholder: "#666"
 }
@@ -95,6 +95,7 @@ export const grid = StyleSheet.create({
 		display: "flex",
 		flexDirection: "row",
 		alignItems: "center",
+		alignContent:'center',
 		justifyContent: "space-between"
 	},
 	rowCenterEnd: {
@@ -130,7 +131,7 @@ export const grid = StyleSheet.create({
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: colors.bgOpacity,
+		backgroundColor: colors.bgLight,
 		borderRadius: w(2),
 		width: w(100),
 		minHeight: h(100),
@@ -299,11 +300,11 @@ export const gstyle = StyleSheet.create({
 	},
 	link: {
 		...gfont.t,
-		color: colors.warning,
+		color: colors.color,
 	},
 	linkCenter: {
 		...gfont.t,
-		color: colors.warning,
+		color: colors.color,
 		marginBottom: h(2),
 		textAlign: "center"
 	},
@@ -327,7 +328,7 @@ export const gstyle = StyleSheet.create({
 		justifyContent: "flex-start"
 	},
 	hr: {
-		backgroundColor: colors.border,
+		backgroundColor: colors.color,
 		height: h(0.1),
 		width: w(90),
 		marginTop: h(2),
@@ -335,7 +336,7 @@ export const gstyle = StyleSheet.create({
 		alignSelf: "center"
 	},
 	hr2: {
-		backgroundColor: colors.border,
+		backgroundColor: colors.color,
 		height: h(0.1),
 		marginTop: h(2),
 		marginBottom: h(2),

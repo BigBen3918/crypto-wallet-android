@@ -2,7 +2,7 @@ import React from "react"
 import WalletConnect from '@walletconnect/client';
 import Icon from "../components/Icon"
 import Avatar from "../components/avatar"
-import {  grid, gstyle, h, w } from "../components/style"
+import {  colors, grid, gstyle, h, w } from "../components/style"
 import { Content, OpacityButton, Wrap } from "../components/commons"
 import { DefaultButton, DefaultInput, Loading, Modal } from "../components/elements"
 import { formatUnit } from "../../library/bigmath"
@@ -153,6 +153,7 @@ export default function ({close, navigation}: any) {
 						label={"Enter wallet password"}
 						inputProps={{
 							placeholder: "Wallet password",
+							style:{borderColor:colors.color, borderWidth: w(0.1)},
 							onChangeText: (txt:string) => updateStatus({password: txt}),
 							value: status.password
 						}}

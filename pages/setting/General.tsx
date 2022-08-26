@@ -67,12 +67,11 @@ export default function ({ navigation }: any) {
 				hideHead
 			>
 				<Wrap style={{paddingRight: w(5), paddingLeft: w(5)}}>
-					<Wrap style={gstyle.hr2} />
 					<Wrap>
-						<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Hide Tokens Without Balance</Content>
+						<Content style={{...gstyle.textLightLg}}>Hide Tokens Without Balance</Content>
 						<Content style={gstyle.textLight}>Prevents tokens with no balance from displaying in your token listing.</Content>
 						<Wrap style={grid.rowCenter}>
-							<Switch thumbColor={colors.warning} onChange={() => updateSetting("hideToken", !setting.hideToken)} value={setting.hideToken} />
+							<Switch thumbColor={colors.color} onChange={() => updateSetting("hideToken", !setting.hideToken)} value={setting.hideToken} />
 						</Wrap>
 					</Wrap>
 					<Wrap style={gstyle.hr2} />
@@ -81,13 +80,13 @@ export default function ({ navigation }: any) {
 						<Content style={gstyle.textLight}>Jazzicons and Blockies are two different styles of unique icons that help you identify an account at a glance.</Content>
 						<Wrap style={grid.rowCenter}>
 							<OpacityButton style={{...grid.rowCenter, flex: 1}} onPress={() => {updateSetting("identicon", "jazzicons")}}>
-								<Wrap style={{marginRight: w(3), borderRadius: w(10), borderWidth: w(0.5), borderColor: setting.identicon === "jazzicons"? colors.warning:"transparent"}}>
+								<Wrap style={{marginRight: w(3), borderRadius: w(10), borderWidth: w(0.5), borderColor: setting.identicon === "jazzicons"? colors.color:"transparent"}}>
 									<Avartar address="0xf0AB1A62b3Ca931619D3108159f0c4010873702B" type={"Zazzicon"} size={10} />
 								</Wrap>
 								<Content style={gstyle.labelWhite}>Zazzicon</Content>
 							</OpacityButton>
 							<OpacityButton style={{...grid.rowCenter, flex: 1}} onPress={() => {updateSetting("identicon", "blokies")}}>
-								<Wrap style={{marginRight: w(3), borderRadius: w(10), borderWidth: w(0.5), borderColor: setting.identicon === "blokies"? colors.warning:"transparent"}}>
+								<Wrap style={{marginRight: w(3), borderRadius: w(10), borderWidth: w(0.5), borderColor: setting.identicon === "blokies"? colors.color:"transparent"}}>
 									<Avartar address="0xf0AB1A62b3Ca931619D3108159f0c4010873702B" type={"Blockies"} size={10} />
 								</Wrap>
 								<Content style={gstyle.labelWhite}>Blockies</Content>

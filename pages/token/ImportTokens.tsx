@@ -225,8 +225,8 @@ export default function ({ navigation }: any) {
 													</>
 												):(
 													<>
-														<Wrap style={{...grid.rowCenterCenter, marginBottom: h(3)}}>
-															<Picture source={Coins} />
+														<Wrap style={{...grid.rowCenterCenter, marginBottom: h(10)}}>
+															
 														</Wrap>
 														<Wrap style={grid.rowCenterCenter}>
 															<Content style={{...gstyle.textLightCenter, width: w(50)}}>Add the tokens you’ve aquired using ICICBWallet</Content>

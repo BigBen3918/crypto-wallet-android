@@ -15,7 +15,7 @@ interface AvatarProps {
 export default function ({size, address, type = "Zazzicon"}: AvatarProps) {
 	return <>
 		{
-			type === "Zazzicon" &&  <Jazzicon size={w(size || 16)} address={address}/>
+			type === "Zazzicon" &&  <Jazzicon size={w(size || 14)} address={address}/>
 		}
 		{
 			type === "Blockies" && <Picture source={{ uri: toDataUrl(address || ZeroAddress) }} style={{width: w(size || 20), height: w(size || 20), borderRadius: w(20)}}/> 

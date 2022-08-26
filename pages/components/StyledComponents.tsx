@@ -149,17 +149,18 @@ export const walletLayout = StyleSheet.create({
 		paddingRight: w(3),
 		paddingTop: h(0.5),
 		paddingBottom: h(0.5),
-		borderColor: colors.bgLight,	
-		borderWidth: w(0.3),
+		borderColor: colors.color,	
+		borderWidth: w(0.1),
 		borderRadius: w(2),
 		marginBottom: h(3)
 	},
 	btn: {
-		...grid.rowCenterCenter,
-		backgroundColor: colors.bgModal,
+		...grid.rowCenterCenter,	
+		borderColor: colors.color,
 		paddingLeft: w(4),
 		paddingRight: w(4),
 		height: h(5),
+		borderWidth:w(0.2),
 		borderTopLeftRadius: w(2),
 		borderBottomRightRadius: w(2),
 	},
@@ -189,14 +190,15 @@ export const walletTokens = StyleSheet.create({
 		paddingRight: w(3),
 		paddingTop: h(0.5),
 		paddingBottom: h(0.5),
-		borderColor: colors.bgLight,
-		borderWidth: w(0.3),
+		borderColor: colors.border,
+		borderWidth: w(0.1),
 		borderRadius: w(2),
 		marginBottom: h(3)
 	},
 	tokenItem: {
 		borderBottomWidth: h(0.1),
 		borderColor: colors.border,
+		backgroundColor: 'rgba(0, 0, 0, 0.3)',
 		paddingRight: w(5),
 		paddingLeft: w(5),
 		paddingTop: h(3),
@@ -227,6 +229,9 @@ export const functionLayout = StyleSheet.create({
 	network: {
 		...grid.rowCenterCenter,
 		backgroundColor: colors.bgLight,
+		borderRadius: w(1),
+		borderColor: colors.color,
+		borderWidth: w(0.1),
 		height: w(9),
 		paddingLeft: w(3),
 		paddingRight: w(1),
@@ -255,6 +260,8 @@ export const setting = StyleSheet.create({
 		paddingLeft: w(5),
 		paddingRight: w(5),
 		borderColor: colors.border,
-		borderWidth: w(0.2)
+		borderBottomWidth: w(0.2),
+		borderTopWidth: w(0.2),
+		backgroundColor: 'rgba(0, 0, 0, 0.2)'
 	}
 })

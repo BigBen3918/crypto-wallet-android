@@ -125,7 +125,7 @@ export default function ({route, navigation }: any) {
 					<Wrap style={{...grid.rowCenterBetween, width: w(100)}}>
 						<OpacityButton style={{width: w(5),  display:'flex', alignContent:'center', justifyContent:'center'}} onPress = {() => {navigation.navigate("WalletTokens")}}> 
 							<Wrap style={{marginLeft: w(1)}}>
-								<Icon.ArrowLeft color={"#eee"}/>
+								<Icon.ArrowLeft color={colors.color}/>
 							</Wrap>
 						</OpacityButton>
 						<Wrap>
@@ -143,13 +143,13 @@ export default function ({route, navigation }: any) {
 						</Wrap>
 						<Wrap style={{width: w(5)}}></Wrap>
 					</Wrap>
-					<Wrap style={{...gstyle.hr2, marginTop: h(0), backgroundColor: colors.warning}} />
+					<Wrap style={{...gstyle.hr2, marginTop: h(0), backgroundColor: colors.color}} />
 					<Wrap>
 					{
 						status.tokenAddress !== ZeroAddress && <>
 							{
 								currentNetwork === "neon" ? (tokenIcons[status.tokenAddress] ?  
-									<Picture source={{uri: tokenIcons[status.tokenAddress]}} style={{width: w(12), height: w(12), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
+									<Picture source={{uri: tokenIcons[status.tokenAddress]}} style={{width: w(18), height: w(18), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
 									:
 									<Avatar address={status.tokenAddress} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={12}/>
 								) :
@@ -164,10 +164,10 @@ export default function ({route, navigation }: any) {
 									icons[network.chainId] ? 
 									(icons[network.chainId].toLowerCase().endsWith(".svg") ? 
 									<Wrap>
-										  <SvgUri width={"25"} height={"25"} source={{uri:icons[network.chainId]}}
+										  <SvgUri width={"40"} height={"40"} source={{uri:icons[network.chainId]}}
 											/>
 									</Wrap>: 
-										<Picture source={{uri: icons[network.chainId]}} style={{width: w(7), height: w(7), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
+										<Picture source={{uri: icons[network.chainId]}} style={{width: w(18), height: w(18), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
 									)
 									:
 									<Avatar address={currentNetwork} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={12}/>
@@ -176,18 +176,18 @@ export default function ({route, navigation }: any) {
 						})
 					}
 					</Wrap>
-					<Content style={{...gstyle.labelWhite, fontSize: w(6), color: colors.warning}}>
+					<Content style={{...gstyle.labelWhite, fontSize: w(6), color: colors.color}}>
 						{roundNumber(formatUnit(status.balance || '0', 18), 8)} {status.symbol}
 					</Content> 
 					<Wrap style={{alignSelf: "center", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", width: w(80), marginTop:h(2), marginBottom: h(3)}}>
 						<FunctionalButton label="Buy" btnProps={{disabled: true}}>
-							<Icon.Receive color={colors.warning} />
+							<Icon.Receive color={colors.color} />
 						</FunctionalButton>
-						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: status.tokenAddress, tokenId: ""})}}>
-							<Icon.Send color={colors.warning} />
+						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: ZeroAddress, tokenId: "", selectedNftIndex: 0})}}>
+							<Icon.Send color={colors.color} />
 						</FunctionalButton>
 						<FunctionalButton label="Swap" btnProps={{disabled: true}}>
-							<Icon.Swap color={colors.warning} />
+							<Icon.Swap color={colors.color} />
 						</FunctionalButton>
 					</Wrap>
 					<Wrap style={grid.colBetween}>
@@ -202,7 +202,7 @@ export default function ({route, navigation }: any) {
 												<Wrap style={grid.rowCenterBetween}>
 													<Wrap style={{marginRight: w(2)}}>
 														{
-															tx.from === currentAccount.toLowerCase() ? <Icon.Send  width={w(5)} height={w(5)} color={colors.warning}/> : <Icon.Receive width={w(5)} height={w(5)} color={colors.warning}/>
+															tx.from === currentAccount.toLowerCase() ? <Icon.Send  width={w(5)} height={w(5)} color={colors.color}/> : <Icon.Receive width={w(5)} height={w(5)} color={colors.color}/>
 														}
 													</Wrap>
 													<Wrap>

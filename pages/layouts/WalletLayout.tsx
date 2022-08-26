@@ -3,7 +3,10 @@ import { colors, grid, gstyle, h, w } from "../components/style"
 import { walletLayout as style } from "../components/StyledComponents"
 import { DefaultButton, DefaultInput, Modal } from "../components/elements"
 import { BgImage, ButtonWithoutFeedback, Content, OpacityButton, Picture, ScrollWrap, Wrap } from "../components/commons"
-import Logo from '../../assets/logo.webp'
+import Logo from '../../assets/logo.png'
+import SideLogo from '../../assets/icicb_logo.png'
+import Menu from '../../assets/menu.png'
+import Search from '../../assets/search.png'
 import Icon from "../components/Icon"
 import CopiedModal from "./CopiedModal"
 import Avatar from "../components/avatar"
@@ -101,13 +104,13 @@ export default function ({ navigation, menuKey, title, content, children, footer
 				{ !hideHead ? 
 					<Wrap style={style.header}>
 						<OpacityButton onPress={onMenu}>
-							<Icon.Logo width={w(7)} height={w(7)} />
+							<Picture source={Menu} style={{ width: w(6), height: w(4) }} />
 						</OpacityButton>
 						<OpacityButton style={{paddingLeft: w(0), paddingTop: h(2)}} onPress={() => navigation.navigate("WalletTokens")}>
 							<Picture source={Logo} style={{ width: w(25), height: w(10) }} />
 						</OpacityButton>
 						<OpacityButton onPress={walletConnect}>
-							<Icon.Search width={w(7)} height={w(7)} color={colors.placeholder} />
+							<Picture source={Search} style={{ width: w(6), height: w(6) }} />
 						</OpacityButton>
 					</Wrap>
 					:
@@ -125,9 +128,9 @@ export default function ({ navigation, menuKey, title, content, children, footer
 					<ButtonWithoutFeedback onPress={closeMenu}>
 						<Wrap style={style.container}>
 							<ButtonWithoutFeedback onPress={()=>{}}>
-								<Wrap style={{flex: 1, width: w(70), backgroundColor: colors.bgSecondary}}>
-									<OpacityButton style={{paddingLeft: w(5), paddingTop: h(2)}} onPress={() => navigation.navigate("WalletTokens")}>
-										<Picture source={Logo} style={{ width: w(20), height: w(9) }} />
+								<Wrap style={{flex: 1, width: w(70), backgroundColor: colors.bgModal}}>
+									<OpacityButton style={{paddingTop: h(2), display:'flex', flexDirection:'row', justifyContent:'center'}} onPress={() => navigation.navigate("WalletTokens")}>
+										<Picture source={SideLogo} style={{ width: w(22), height: w(8) }} />
 									</OpacityButton>
 									<ScrollWrap>
 										<Wrap style={{paddingTop: h(2)}}>
@@ -177,8 +180,8 @@ export default function ({ navigation, menuKey, title, content, children, footer
 												</OpacityButton>
 												<Wrap style={{alignSelf: "center", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", width: w(60), marginBottom: h(3)}}>
 													<OpacityButton style={style.btn} onPress={()=>navigation.navigate("Send", {page:"money", tokenAddress: ZeroAddress, tokenId: ''})}>
-														<Wrap style={{marginRight: w(1)}}><Icon.Send color={colors.warning} /></Wrap>
-														<Content style={gstyle.labelWhite}>Send</Content>
+														<Wrap style={{marginRight: w(1)}}><Icon.Send color={colors.color} /></Wrap>
+														<Content style={{...gstyle.labelWhite, paddingLeft: w(2)}}>Send</Content>
 													</OpacityButton>
 												</Wrap>
 												<Wrap style={{alignSelf: "stretch", height: h(0.1), backgroundColor: colors.color}} />
@@ -188,9 +191,9 @@ export default function ({ navigation, menuKey, title, content, children, footer
 															{g.map((i:any, k:number) => (
 																<OpacityButton key={"key" + k} style={{...style.item, backgroundColor: menuKey === i.key ? colors.border : "auto"}} onPress={() => {updateStatus({showMenu: false}); i.event()}}>
 																	<Wrap style={{marginRight: w(1)}}>
-																		{i.icon(menuKey === i.key ? colors.color : colors.warning)}
+																		{i.icon(menuKey === i.key ? colors.warning : colors.color)}
 																	</Wrap>
-																	<Content style={{...style.itemContent, color: menuKey === i.key ? colors.color : colors.warning}}>{i.label}</Content>
+																	<Content style={{...style.itemContent, color: menuKey === i.key ? colors.warning : colors.color}}>{i.label}</Content>
 																</OpacityButton>
 															))}
 															{gk !== menuItems.length - 1 && <Wrap style={gstyle.hr2} />}

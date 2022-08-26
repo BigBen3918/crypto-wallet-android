@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "../components/Icon"
-import Logo from '../../assets/logo.webp'
+import Logo from '../../assets/logo.png'
 import NetworkModal from "./NetworkModal"
 import Avatar from "../components/avatar"
 import AccountModal from "./AccountModal"
@@ -40,7 +40,7 @@ export default function ({ navigation, title, hideClose, content, children, onBa
 			<Wrap style={gstyle.body}>
 				<Wrap style={style.header}>
 					<OpacityButton onPress={() => navigation.navigate("WalletTokens")}>
-						<Picture source={Logo} style={{width:w(21), height:w(8)}}/>
+						<Picture source={Logo} style={{ width: w(20), height: w(8) }} />
 					</OpacityButton>
 					<Wrap style={style.content}>
 						<OpacityButton style={style.network} onPress={() => updateStatus({networkModal: true})}>

@@ -101,7 +101,7 @@ export default function ({ navigation }: any) {
 					<Content style={gstyle.textLightCenter}>You can ONLY recover this wallet with your <Content style={gstyle.bold}>Secret Recovery Phrase</Content> ICICBWallet does not have your Secret Recovery Phrase.</Content>
 					<Wrap style={grid.btnGroup}>
 						<DefaultButton btnProps={{onPress:() => {updateStatus({showRemoveWalletWarning: false})}}}>Cancel</DefaultButton>
-						<DefaultButton theme="danger" btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>
+						<DefaultButton theme="warning" btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

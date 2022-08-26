@@ -102,7 +102,7 @@ export default function ({ navigation }: any) {
 				menuKey="wallet"
 				content={(
 					<OpacityButton style={grid.rowCenterCenter} onPress={() => updateStatus({networkModal: true})}>
-						<Wrap style={{width: w(1), height: w(1), backgroundColor: colors.warning, marginRight: w(2)}} />
+						<Wrap style={{width: w(1), height: w(1), backgroundColor: colors.color, marginRight: w(2)}} />
 						<Content style={gstyle.labelWhite}>
 							{Object.values(networks).map((network) => {
 								if( network.chainKey === currentNetwork){
@@ -110,7 +110,7 @@ export default function ({ navigation }: any) {
 								}}) 
 							}
 						</Content>
-						<Wrap style={{width: w(1), height: w(1), backgroundColor: colors.warning, marginLeft: w(2)}} />
+						<Wrap style={{width: w(1), height: w(1), backgroundColor: colors.color, marginLeft: w(2)}} />
 					</OpacityButton>
 				)}
 			>
@@ -156,22 +156,22 @@ export default function ({ navigation }: any) {
 					</OpacityButton>
 					<Wrap style={style.btnWrapper}>
 						<FunctionalButton label="Buy" btnProps={{disabled: true}}>
-							<Icon.Receive color={colors.warning} />
+							<Icon.Receive color={colors.color} />
 						</FunctionalButton>
 						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: ZeroAddress, tokenId: "", selectedNftIndex: 0})}}>
-							<Icon.Send color={colors.warning} />
+							<Icon.Send color={colors.color} />
 						</FunctionalButton>
 						<FunctionalButton label="Swap" btnProps={{disabled: true}}>
-							<Icon.Swap color={colors.warning} />
+							<Icon.Swap color={colors.color} />
 						</FunctionalButton>
 					</Wrap>
 					<Wrap style={grid.colBetween}>
 						<Wrap style={grid.rowCenterAround}>
-							<OpacityButton style={{flex: 1, borderBottomWidth: h(0.1),  borderColor: (status.tabKey === "tokens" ? colors.color : colors.border)}} onPress={() => updateStatus({tabKey: "tokens"})}>
-								<Content style={{...gstyle.textLightCenter, color:(status.tabKey === "tokens" ? colors.color : "#aaa")}}>// TOKENS</Content>
+							<OpacityButton style={{flex: 1,  backgroundColor:  (status.tabKey === "tokens" ? colors.color : "#64410d"),  paddingTop: h(1.6), borderTopLeftRadius: w(2), borderTopRightRadius: w(2)}} onPress={() => updateStatus({tabKey: "tokens"})}>
+								<Content style={{...gstyle.textLightCenter, color:(status.tabKey === "tokens" ? colors.bgButton : "#ddd")}}>TOKENS</Content>
 							</OpacityButton>
-							<OpacityButton style={{flex: 1, borderBottomWidth: h(0.1),  borderColor: (status.tabKey === "nfts" ? colors.color : colors.border)}} onPress={() => updateStatus({tabKey: "nfts"})}>
-								<Content style={{...gstyle.textLightCenter, color:(status.tabKey === "nfts" ? colors.color : "#aaa")}}>// NFT'S</Content>
+							<OpacityButton style={{flex: 1,  backgroundColor: (status.tabKey === "nfts" ? colors.color: "#64410d" ),paddingTop: h(1.6), borderTopLeftRadius: w(2), borderTopRightRadius: w(2)}} onPress={() => updateStatus({tabKey: "nfts"})}>
+								<Content style={{...gstyle.textLightCenter, color:(status.tabKey === "nfts" ? colors.bgButton : "#ddd")}}>NFT'S</Content>
 							</OpacityButton>
 						</Wrap>
 						{status.tabKey === "tokens" && (

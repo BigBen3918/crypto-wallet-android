@@ -42,7 +42,7 @@ export default function ({ route, navigation }: any) {
 			"value":{},
 			"tokens":{}
 		}];
-		update({vault: vault, accounts: {...accounts}, apps:{}, networks:[...DEFAULT_NETWORKS],   contacts:[], createdAccountLayer:1, currentAccount:wallet.publickey, currentNetwork:"rinkeby", connects: [], connectHistory: [], setting: {
+		update({vault: vault, accounts: {...accounts}, apps:{}, networks:[...DEFAULT_NETWORKS],   contacts:[], createdAccountLayer:1, currentAccount:wallet.publickey, currentNetwork:"neon", connects: [], connectHistory: [], setting: {
 				currency:			'USD',
 				isFiat: 			true,
 				identicon:			"jazzicons",

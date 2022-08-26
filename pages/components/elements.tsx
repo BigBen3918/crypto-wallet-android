@@ -67,7 +67,7 @@ export const ImageInput = ({ icon, inputProps, iconProps }
 			style={{
 				...grid.rowCenterCenter,
 				...grid.gridMargin2,
-				backgroundColor: colors.color
+				backgroundColor: 'rgba(0, 0, 0, 0.8)'
 			}}
 		>
 			<Wrap
@@ -180,12 +180,16 @@ export const FunctionalButton = ({ label, children, btnProps }
 			<OpacityButton 
 				style={{
 					...grid.rowCenterCenter,
-					width: w(15),
-					height: h(8),
-					backgroundColor: colors.color,
+					width: w(18),
+					height: h(10),
+					backgroundColor: colors.bgSecondary,
 					marginBottom: h(1),
-					borderTopLeftRadius: w(2),
-					borderBottomRightRadius: w(2),
+					borderRadius: w(10),
+					shadowColor: "white",
+					shadowOffset: {width: w(3), height:w(3)},
+					shadowOpacity: 1,
+					shadowRadius: 3,
+					elevation: 20
 				}}
 				{...btnProps}
 			>

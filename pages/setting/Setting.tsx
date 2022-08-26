@@ -1,5 +1,5 @@
 import React from "react"
-import {  grid, gstyle, h, w } from "../components/style"
+import {  colors, grid, gstyle, h, w } from "../components/style"
 import { setting as style } from "../components/StyledComponents"
 import { BgImage, Content, OpacityButton, ScrollWrap, Wrap } from "../components/commons"
 import Icon from "../components/Icon"
@@ -62,9 +62,9 @@ export default function ({ navigation }: any): JSX.Element {
 			<Wrap style={gstyle.body}>
 				<Wrap style={style.header}>
 					<OpacityButton style={style.arrowLeft} onPress={() => navigation?.goBack()}>
-						<Icon.ArrowLeft width={w(6)} height={w(6)} />
+						<Icon.ArrowLeft width={w(6)} height={w(6)} color={colors.color} />
 					</OpacityButton>
-					<Content style={gstyle.title2}>Setting</Content>
+					<Content style={{...gstyle.title2, color:'white'}}>Setting</Content>
 				</Wrap>
 				<ScrollWrap style={{flex: 1}}>
 					{menuItems.map((i: any, k: number) => (
