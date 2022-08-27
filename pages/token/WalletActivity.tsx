@@ -183,7 +183,7 @@ export default function ({route, navigation }: any) {
 						<FunctionalButton label="Buy" btnProps={{disabled: true}}>
 							<Icon.Receive color={colors.color} />
 						</FunctionalButton>
-						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: ZeroAddress, tokenId: "", selectedNftIndex: 0})}}>
+						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: status.tokenAddress, tokenId: "", selectedNftIndex: 0})}}>
 							<Icon.Send color={colors.color} />
 						</FunctionalButton>
 						<FunctionalButton label="Swap" btnProps={{disabled: true}}>

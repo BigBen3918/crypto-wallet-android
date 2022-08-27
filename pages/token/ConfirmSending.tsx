@@ -140,7 +140,7 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 				<Wrap style={{paddingLeft: w(5), paddingRight: w(5)}}>
 					<Wrap style={{...grid.rowCenterAround, ...grid.gridMargin2}}>
 						<Wrap style={{flex: 1, paddingRight: w(5), paddingLeft: w(5)}}>
-							<Wrap style={{backgroundColor: colors.bgSecondary, paddingTop: h(2), paddingBottom: h(2)}}>
+							<Wrap style={{backgroundColor: colors.bgLight, paddingTop: h(2), paddingBottom: h(2), borderRadius: w(1)}}>
 								<Wrap style={{...grid.gridMargin1, alignSelf: "center"}}>
 									<Avatar size={10} type={setting.identicon === "jazzicons" ? "Zazzicon" : "Blockies"} address={currentAccount} />
 								</Wrap>
@@ -154,11 +154,11 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 						</Wrap>
 						<Wrap style={{...grid.rowCenterCenter, width: w(10), height: h(5), backgroundColor: colors.bgLight, borderRadius: w(1)}}>
 							<Wrap style={{marginLeft: w(2)}}>
-								<Icon.ArrowRight color={colors.warning} width={w(5)} height={w(5)} />
+								<Icon.ArrowRight color={colors.color} width={w(5)} height={w(5)} />
 							</Wrap>
 						</Wrap>
 						<Wrap style={{flex: 1, paddingRight: w(5), paddingLeft: w(5)}}>
-							<Wrap style={{backgroundColor: colors.bgSecondary, paddingTop: h(2), paddingBottom: h(2)}}>
+							<Wrap style={{backgroundColor: colors.bgLight, paddingTop: h(2), paddingBottom: h(2),borderRadius: w(1)}}>
 								<Wrap style={{...grid.gridMargin1, alignSelf: "center"}}>
 								<Avatar size={10} type={setting.identicon === "jazzicons" ? "Zazzicon" : "Blockies"} address={to} />
 								</Wrap>
@@ -193,9 +193,9 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 							</Wrap>
 						</Wrap>
 						<Wrap style={grid.rowCenterBetween}>
-							<Content style={{...gstyle.labelSm, color: colors.placeholder}}>Linkely in  30 secondes</Content>
+							<Content style={{...gstyle.labelSm, color: colors.white}}>Linkely in  30 secondes</Content>
 							<Wrap style={grid.rowCenter}>
-								<Content style={{...gstyle.labelSm, fontWeight: "700"}}>Max fee: </Content>
+								<Content style={{...gstyle.labelSm, fontWeight: "700", color: colors.white}}>Max fee: </Content>
 								<Content style={gstyle.labelSm}>{roundNumber(formatUnit(gasFee, 9)) + nativeSymbol}</Content>
 							</Wrap>
 						</Wrap>
@@ -213,7 +213,7 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 							</Wrap>
 						</Wrap>
 						<Wrap style={grid.rowCenterBetween}>
-							<Content style={{...gstyle.labelSm, color: colors.placeholder}}>Amount + gas fee</Content>
+							<Content style={{...gstyle.labelSm, color: colors.white}}>Amount + gas fee</Content>
 							<Wrap style={grid.rowCenter}>
 								<Content style={gstyle.labelSm}>
 									{

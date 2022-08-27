@@ -138,6 +138,7 @@ export default function ({ route,  navigation }: SendAmountProps) {
 		let rpc = '', chainId = 0, explorer = '';
 		let psymbol = '';
 		let nativeBalance  = '';
+		console.log(address)
 		Object.values(networks).map(( network) => {
 			if( network.chainKey === currentNetwork){
 				symbol =  network.symbol;
@@ -211,8 +212,8 @@ export default function ({ route,  navigation }: SendAmountProps) {
 				content={(
 					<Wrap style={grid.rowBetween}>
 						<OpacityButton style={{marginLeft: w(2), display: 'flex', flexDirection: 'row'}} onPress={() => navigation.goBack()}>
-							<Icon.ArrowLeft width={w(5)} height={w(5)} />
-							<Content style={gstyle.labelWhite}>Back</Content>
+							<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
+							<Content style={{...gstyle.labelWhite, color: colors.color}}>Back</Content>
 						</OpacityButton>
 						<OpacityButton style={{marginRight: w(3)}} onPress={() => navigation.navigate("WalletTokens")}>
 							<Content style={gstyle.labelWhite}>Cancel</Content>
@@ -247,7 +248,7 @@ export default function ({ route,  navigation }: SendAmountProps) {
 							<Wrap>
 								<Wrap style={{...grid.rowCenterBetween, width: w(90), paddingTop: h(2), paddingBottom: h(2)}}>
 									<Wrap style={{width: w(8)}}></Wrap>
-									<Input keyboardType="numeric" autoFocus style={{fontSize: w(10), width:w(65),  color: colors.color, textAlign: "center"}} value={status.inputAmount} onChangeText = {(txt: string) => {checkTokenStatus(txt, status.data);}} />
+									<Input keyboardType="numeric" autoFocus style={{fontSize: w(10), width:w(65),  color: colors.white, textAlign: "center"}} value={status.inputAmount} onChangeText = {(txt: string) => {checkTokenStatus(txt, status.data);}} />
 									<Wrap style={{width: w(13)}}>
 										<OpacityButton onPress={() => {setMax()}}>
 											<Content style={gstyle.link}>Max</Content>

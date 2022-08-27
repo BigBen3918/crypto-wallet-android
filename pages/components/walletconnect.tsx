@@ -682,7 +682,8 @@ const WalletConnectDetect =  () => {
 							inputProps={{
 								placeholder: "Wallet password",
 								onChangeText: (txt:string) => updateStatus({password: txt}),
-								value: status.password
+								value: status.password,
+								style: {borderColor: colors.color, borderWidth: w(0.1)}
 							}}
 							visibleValue={true}
 						/>
@@ -742,7 +743,8 @@ const WalletConnectDetect =  () => {
 							inputProps={{
 								placeholder: "Wallet password",
 								onChangeText: (txt:string) => updateStatus({password: txt}),
-								value: status.password
+								value: status.password,
+								style: {borderColor: colors.color, borderWidth: w(0.1)}
 							}}
 							visibleValue={true}
 						/>
@@ -814,7 +816,8 @@ const WalletConnectDetect =  () => {
 							inputProps={{
 								placeholder: "Wallet password",
 								onChangeText: (txt:string) => updateStatus({password: txt}),
-								value: status.password
+								value: status.password,
+								style: {borderColor: colors.color, borderWidth: w(0.1)}
 							}}
 							visibleValue={true}
 						/>
@@ -937,7 +940,8 @@ const WalletConnectDetect =  () => {
 									inputProps={{
 										placeholder: "Wallet password",
 										onChangeText: (txt:string) => updateStatus({password: txt}),
-										value: status.password
+										value: status.password,
+										style: {borderColor: colors.color, borderWidth: w(0.1)}
 									}}
 									visibleValue={true}
 								/>
@@ -1074,7 +1078,8 @@ const WalletConnectDetect =  () => {
 									inputProps={{
 										placeholder: "Wallet password",
 										onChangeText: (txt:string) => updateStatus({password: txt}),
-										value: status.password
+										value: status.password,
+										style: {borderColor: colors.color, borderWidth: w(0.1)}
 									}}
 									visibleValue={true}
 								/>

@@ -286,7 +286,8 @@ export default function ({ navigation }: any) {
 											{
 												nfts[currentNetwork] && nfts[currentNetwork].map((nft: NFTObject, index: number) => {
 													if(nft.owner === currentAccount) return (
-														<OpacityButton key={index} style={{borderBottomWidth: h(0.1), borderColor: colors.border, paddingRight: w(5), paddingLeft: w(5), paddingTop: h(2), paddingBottom: h(2)}} onPress={() => showNFT(index)}>
+														<OpacityButton key={index} style={{borderBottomWidth: h(0.1), borderColor: colors.border, paddingRight: w(5), paddingLeft: w(5), paddingTop: h(2), paddingBottom: h(2), 
+															backgroundColor: 'rgba(0, 0, 0, 0.3)'}} onPress={() => showNFT(index)}>
 															<Wrap style={grid.rowCenter}>
 																{/* <Wrap style={{marginRight: w(1)}}>
 																	{!status.nftFlags[index] ? <Icon.ArrowRight /> : <Icon.ArrowBottom />}
@@ -338,6 +339,7 @@ export default function ({ navigation }: any) {
 						inputProps={{
 							placeholder: "Account Name",
 							value: status.accountLabel,
+							style:{borderColor: colors.color, borderWidth: w(0.1)},
 							onChangeText: (txt:string) => updateStatus({accountLabel: txt})
 						}}
 					></DefaultInput>

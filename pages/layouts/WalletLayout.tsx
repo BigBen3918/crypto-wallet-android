@@ -229,7 +229,8 @@ export default function ({ navigation, menuKey, title, content, children, footer
 						inputProps={{
 							placeholder: "Account Name",
 							value: status.accountLabel,
-							onChangeText: (txt:string) => updateStatus({accountLabel: txt})
+							onChangeText: (txt:string) => updateStatus({accountLabel: txt}),
+							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					></DefaultInput>
 					<Wrap style={grid.btnGroup}>
