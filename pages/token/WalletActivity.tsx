@@ -148,7 +148,7 @@ export default function ({route, navigation }: any) {
 					{
 						status.tokenAddress !== ZeroAddress && <>
 							{
-								currentNetwork === "neon" ? (tokenIcons[status.tokenAddress] ?  
+								currentNetwork === "rinkeby" ? (tokenIcons[status.tokenAddress] ?  
 									<Picture source={{uri: tokenIcons[status.tokenAddress]}} style={{width: w(18), height: w(18), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
 									:
 									<Avatar address={status.tokenAddress} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={12}/>

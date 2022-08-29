@@ -183,7 +183,7 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 								to: uri?.target_address || '',
 								data: encode,
 								...txParams,
-								chainId,
+								chainId: BigNumber.from(chainId).toHexString().replace("0x0", "0x"),
 								gasPrice,
 								nonce
 								}], id: 1
@@ -200,13 +200,23 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 								from: currentAccount,
 								to: uri?.target_address || '',
 								value,
-								chainId: chainId,
+								chainId: BigNumber.from(chainId).toHexString().replace("0x0", "0x"),
 								gasPrice: gasPrice,
 								nonce: nonce
 								}], id: 1
 							}
 						])
-						console.log(gasLimitRows)
+						console.log({
+							jsonrpc: "2.0", method: "eth_estimateGas", params: [{
+							from: currentAccount,
+							to: uri?.target_address || '',
+							value,
+							chainId: BigNumber.from(chainId).toHexString().replace("0x0", "0x"),
+							gasPrice: gasPrice,
+							nonce: nonce
+							}], id: 1
+						})
+						console.log("gasLimitRows", gasLimitRows)
 						const gasLimit = gasLimitRows?.[0]?.result || 0;
 						if(gasLimit == 0){
 							showToast("Could not estimate gasLimit", "warning");

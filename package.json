@@ -9,6 +9,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
+    "build": "expo build:android -t apk",
     "test-script": "mocha -r ts-node/register test/**/*.spec.ts"
   },
   "jest": {

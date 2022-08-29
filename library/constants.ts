@@ -77,25 +77,55 @@ export const rpcMethods = Object.freeze([
 
 export const DEFAULT_NETWORKS = [
 	{
-		chainKey:			"neon",
+		chainKey:			"ethereum",
 		testnet:			false,
-		label: 				"Neon Mainnet",
-		rpc: 				"https://mainnet.neonlink.io",
-		chainId: 			259,
-		symbol: 			"NEON",
-		url: 				"https://scan.neonlink.io/",
-		imported:			false
+		label: 				"Ethereum Mainnet",
+		rpc: 				"https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
+		chainId: 			1,
+		symbol: 			"ETH",
+		url: 				"https://etherscan.io/",
+		imported:			true,
 	},
 	{
-		chainKey:			"neontestnet",
-		testnet:			true,
-		label: 				"Neon Testnet",
-		rpc: 				"https://testnet.neonlink.io/",
-		chainId: 			9559,
-		symbol: 			"NEON",
-		url: 				"https://testnet-scan.neonlink.io/",
-		imported:			false
+		chainKey:			"binancemainnet",
+		testnet:			false,
+		label: 				"Binance Smart Chain Mainnet",
+		rpc: 				"https://bsc.mytokenpocket.vip",
+		chainId: 			56,
+		symbol: 			"BNB",
+		url: 				"https://bscscan.com/",
+		imported:			true,
 	},
+	{
+		chainKey:			"rinkeby",
+		testnet:			true,
+		label: 				"Rinkeby Testnet",
+		rpc: 				"https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+		chainId: 			4,
+		symbol: 			"ETH",
+		url: 				"https://rinkeby.etherscan.io/",
+		imported:			true,
+	},
+	{
+		chainKey:			"ropsten",
+		testnet:			true,
+		label: 				"Ropsten Testnet",
+		rpc: 				"https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+		chainId: 			3,
+		symbol: 			"ETH",
+		url: 				"https://ropsten.etherscan.io/",
+		imported:			true,
+	},
+	{
+		chainKey:			"Kovan",
+		testnet:			true,
+		label: 				"Kovan Testnet",
+		rpc: 				"ws://kovan.poa.network:8546",
+		chainId: 			42,
+		symbol: 			"ETH",
+		url: 				"https://kovan.etherscan.io/",
+		imported:			true,
+	}
 ] as NetworkObject[]
 
 export const DEFAULT_IMPORT_NETWORKS = [
