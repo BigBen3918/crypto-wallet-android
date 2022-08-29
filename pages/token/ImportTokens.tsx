@@ -256,7 +256,8 @@ export default function ({ navigation }: any) {
 												inputProps={{
 													placeholder: "Ox...",
 													onChangeText: (txt:string) => checkToken(txt),
-													value:	  status.address2
+													value:	  status.address2,
+													style:{borderColor: colors.color, borderWidth: w(0.1)}
 												}}
 											/>
 											<DefaultInput
@@ -265,7 +266,8 @@ export default function ({ navigation }: any) {
 												inputProps={{
 													placeholder: "GNO",
 													value:	  status.symbol2,
-													editable: false
+													editable: false,
+													style:{borderColor: colors.color, borderWidth: w(0.1)}
 												}}
 											/>
 											<DefaultInput
@@ -274,7 +276,8 @@ export default function ({ navigation }: any) {
 												inputProps={{
 													placeholder: "18",
 													value:	status.decimals2,
-													editable: false
+													editable: false,
+													style:{borderColor: colors.color, borderWidth: w(0.1)}
 												}}
 											/>
 											<Wrap style={grid.btnGroup}>

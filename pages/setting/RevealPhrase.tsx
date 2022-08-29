@@ -101,11 +101,11 @@ export default function ({ navigation }: any) {
 							)}
 						</>
 					)}
-					<Wrap style={grid.btnGroup}>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
 						{ !status.showKey ? (
 							<>
-								<DefaultButton theme="init" btnProps={{onPress: () => navigation?.navigate("Security")}}>Cancel</DefaultButton>
-								<DefaultButton theme="warning" btnProps={{onPress: () => confirmPassword()}}>Next</DefaultButton>
+								<DefaultButton width={40} theme="init" btnProps={{onPress: () => navigation?.navigate("Security")}}>Cancel</DefaultButton>
+								<DefaultButton width={40} theme="warning" btnProps={{onPress: () => confirmPassword()}}>Next</DefaultButton>
 							</>
 						) : (
 							<DefaultButton theme="warning" btnProps={{onPress: () => navigation?.navigate("Security")}}>Done</DefaultButton>

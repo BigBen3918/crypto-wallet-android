@@ -138,7 +138,6 @@ export default function ({ route,  navigation }: SendAmountProps) {
 		let rpc = '', chainId = 0, explorer = '';
 		let psymbol = '';
 		let nativeBalance  = '';
-		console.log(address)
 		Object.values(networks).map(( network) => {
 			if( network.chainKey === currentNetwork){
 				symbol =  network.symbol;

@@ -1,5 +1,5 @@
 import React from "react"
-import { grid, gstyle, h } from "../../../components/style"
+import { colors, grid, gstyle, h, w } from "../../../components/style"
 import { Content, Wrap } from "../../../components/commons"
 import { DefaultButton, DefaultInput, Modal } from "../../../components/elements"
 import useStore, { decrypt, encrypt, hmac } from "../../../../useStore"
@@ -69,7 +69,8 @@ export default function ({close}: any) {
 				inputProps={{
 					placeholder: "Your password",
 					onChangeText: (txt:string) => updateStatus({yourpass: txt}),
-					value: status.yourpass
+					value: status.yourpass,
+					style:{borderColor: colors.color, borderWidth: w(0.1)}
 				}}
 			/>
 			<DefaultInput
@@ -78,11 +79,12 @@ export default function ({close}: any) {
 				inputProps={{
 					placeholder: "New password",
 					onChangeText: (tx:string) => changeNewPass(tx),
-					value: status.newpass
+					value: status.newpass,
+					style:{borderColor: colors.color, borderWidth: w(0.1)}
 				}}
-				warning={(
-					<Content style={gstyle.labelWhite}>Password Strength: <Content style={gstyle.textDanger}>{status.strength}</Content></Content>
-				)}
+				// warning={(
+				// 	<Content style={gstyle.labelWhite}>Password Strength: <Content style={gstyle.textDanger}>{status.strength}</Content></Content>
+				// )}
 			/>
 			<DefaultInput
 				visibleValue={true}
@@ -90,7 +92,8 @@ export default function ({close}: any) {
 				inputProps={{
 					placeholder: "Confirm password",
 					onChangeText: (tx:string) => updateStatus({confirmpass: tx}),
-					value: status.confirmpass
+					value: status.confirmpass,
+					style:{borderColor: colors.color, borderWidth: w(0.1)}
 				}}
 				warning={(
 					<Content style={gstyle.labelWhite}>Must be at least 8 characters</Content>

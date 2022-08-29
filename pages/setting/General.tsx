@@ -59,9 +59,9 @@ export default function ({ navigation }: any) {
 				content={
 					<Wrap style={gstyle.titleEff}>
 						<OpacityButton style={{marginRight: w(7)}} onPress={()=>navigation?.goBack()}>
-							<Icon.ArrowLeft width={w(5)} height={w(5)} />
+							<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 						</OpacityButton>
-						<Content style={{...gstyle.title2}}>General</Content>
+						<Content style={{...gstyle.title2, color: colors.white}}>General</Content>
 					</Wrap>
 				}
 				hideHead

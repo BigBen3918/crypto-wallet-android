@@ -41,7 +41,7 @@ export default function ({ navigation }: any) {
 			memo:				status.memo
 		}];
 		update({contacts: cts})
-		updateStatus({addModal: false})
+		updateStatus({addModal: false, label:"", address:"", memo: ""})
 		showToast("Added new contact address", "success")
 	}
 
@@ -53,9 +53,9 @@ export default function ({ navigation }: any) {
 				content={
 					<Wrap style={gstyle.titleEff}>
 						<OpacityButton style={{marginRight: w(2)}} onPress={()=>navigation?.goBack()}>
-							<Icon.ArrowLeft width={w(5)} height={w(5)} />
+							<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 						</OpacityButton>
-						<Content style={{...gstyle.title2}}>Contacts</Content>
+						<Content style={{...gstyle.title2, color: colors.white}}>Contacts</Content>
 					</Wrap>
 				}
 				footer={(
@@ -91,7 +91,8 @@ export default function ({ navigation }: any) {
 						inputProps={{
 							placeholder: "Name",
 							onChangeText: (txt:string) => updateStatus({label: txt}),
-							value: status.label
+							value: status.label,
+							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					/>
 					<DefaultInput
@@ -100,7 +101,8 @@ export default function ({ navigation }: any) {
 						inputProps={{
 							placeholder: "Public address (0x), or ENS",
 							onChangeText: (txt:string) => updateStatus({address: txt}),
-							value: status.address
+							value: status.address,
+							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					/>
 					<DefaultInput
@@ -109,7 +111,8 @@ export default function ({ navigation }: any) {
 						inputProps={{
 							placeholder: "Memo",
 							onChangeText: (txt:string) => updateStatus({memo: txt}),
-							value: status.memo
+							value: status.memo,
+							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					/>
 					<Wrap style={grid.btnGroup}>

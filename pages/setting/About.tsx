@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "../components/Icon"
-import { grid, gstyle, h, w } from "../components/style"
+import { colors, grid, gstyle, h, w } from "../components/style"
 import { Content, OpacityButton, Wrap } from "../components/commons"
 import WalletLayout from "../layouts/WalletLayout"
 
@@ -12,9 +12,9 @@ export default function ({ navigation }: any) {
 			content={
 				<Wrap style={gstyle.titleEff}>
 					<OpacityButton style={{marginRight: w(2)}} onPress={()=>navigation?.goBack()}>
-						<Icon.ArrowLeft width={w(5)} height={w(5)} />
+						<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 					</OpacityButton>
-					<Content style={{...gstyle.title2}}>About</Content>
+					<Content style={{...gstyle.title2, color: colors.white}}>About</Content>
 				</Wrap>
 			}
 			hideHead

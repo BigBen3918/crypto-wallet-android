@@ -49,6 +49,7 @@ import Unlock 			from './pages/auth/Unlock'
 import Loading 			from './pages/components/loading'
 import WebView 			from './pages/token/WebView'
 import WalletConnect 	from './pages/token/WalletconnectCapture'
+import ContractTransaction 	from './pages/token/ContractTransaction'
 import { checkBalances, checkNFT, waitTx, ZeroAddress } from './library/wallet'
 
 const store = configureStore({ reducer: Slice.reducer });
@@ -286,6 +287,7 @@ const AppContainer = () => {
 				<Stack.Screen name="Loading" component={Loading} />
 				<Stack.Screen name="WebView" component={WebView} />
 				<Stack.Screen name="WalletconnectCapture" component={WalletConnect} />
+				<Stack.Screen name="ContractTransaction" component={ContractTransaction} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	)

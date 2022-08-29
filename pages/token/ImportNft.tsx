@@ -155,7 +155,8 @@ export default function ({ navigation }: any) {
 						inputProps={{
 							placeholder: "0x...",
 							value: status.address,
-							onChangeText: (txt:string) => updateStatus({address: txt})
+							onChangeText: (txt:string) => updateStatus({address: txt}),
+							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					/>
 					<DefaultInput
@@ -164,12 +165,13 @@ export default function ({ navigation }: any) {
 						inputProps={{
 							placeholder: "Enter the collectible ID",
 							value: status.tokenId,
-							onChangeText: (txt:string) => updateStatus({tokenId: txt})
+							onChangeText: (txt:string) => updateStatus({tokenId: txt}),
+							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					/>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: goBack}}>Cancel</DefaultButton>
-						<DefaultButton theme="warning" btnProps={{onPress: ()=>{importNFT()}}}>Import</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress: goBack}}>Cancel</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: ()=>{importNFT()}}}>Import</DefaultButton>
 					</Wrap>
 				</Wrap>
 			</FunctionLayout>

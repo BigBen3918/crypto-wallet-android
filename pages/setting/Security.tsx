@@ -78,9 +78,9 @@ export default function ({ navigation }: any) {
 				content={
 					<Wrap style={gstyle.titleEff}>
 						<OpacityButton style={{marginRight: w(2)}} onPress={()=>navigation?.goBack()}>
-							<Icon.ArrowLeft width={w(5)} height={w(5)} />
+							<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 						</OpacityButton>
-						<Content style={{...gstyle.title2}}>Security &amp; Privacy</Content>
+						<Content style={{...gstyle.title2, color: colors.white}}>Security &amp; Privacy</Content>
 					</Wrap>
 				}
 				hideHead
@@ -108,11 +108,11 @@ export default function ({ navigation }: any) {
 						<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Show Incoming Transactions</Content>
 						<Content style={gstyle.textLight}>Select this to use Etherscan to show incoming transactions in the transactions list</Content>
 						<Wrap style={grid.rowCenter}>
-							<Wrap><Switch  thumbColor={colors.warning} onValueChange={() => updateSetting("ShowIncomingTxs", !setting.ShowIncomingTxs)} value={setting.ShowIncomingTxs} /></Wrap>
+							<Wrap><Switch  thumbColor={colors.color} onValueChange={() => updateSetting("ShowIncomingTxs", !setting.ShowIncomingTxs)} value={setting.ShowIncomingTxs} /></Wrap>
 							<Content  style={gstyle.labelWhite}>{setting.ShowIncomingTxs ? "ON": "OFF"}</Content>
 						</Wrap>
 					</Wrap>
-					<Wrap style={gstyle.hr2} />
+					<Wrap style={gstyle.hr2} />	
 					<Wrap>
 						<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Auto-lock</Content>
 						<Content style={gstyle.textLight}>Choose the amount of time before the application automatically locks</Content>

@@ -104,18 +104,18 @@ export default function ({  navigation }: any) {
 			>
 				{status.isMatch && (
 					<Wrap style={{position: "absolute", top: h(6.5), right: w(1)}}>
-						<Icon.Check color={colors.warning} width={30} height={30} />
+						<Icon.Check color={colors.color} width={30} height={30} />
 					</Wrap>
 				)}
 			</DefaultInput>
 			
-			<Wrap style={{alignSelf: "stretch", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+			{/* <Wrap style={{alignSelf: "stretch", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
 				<Content style={gstyle.labelWhite}>Remember me</Content>
 				<Wrap style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
 					<Wrap><Switch thumbColor={colors.color} onChange={() => updateStatus({isRemember: !status.isRemember})} value={status.isRemember} /></Wrap>
 					<Content  style={gstyle.labelWhite}>{status.isRemember ? "ON": "OFF"}</Content>
 				</Wrap>
-			</Wrap>
+			</Wrap> */}
 			<Wrap style={style.checkBox}>
 				<Checkbox status={status.isAccept ? "checked" : "unchecked"} color={colors.color} uncheckedColor={colors.color} onPress={() => updateStatus({isAccept: !status.isAccept})} />
 				<Content style={gstyle.labelWhite}>I understand that ICICBWallet cannot recover this password for me. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Learn more</Content>.</Content>

@@ -8,6 +8,7 @@ import Slice from './reducer';
 
 import langEn from './locales/en-US.json'
 import langCn from './locales/zh-CN.json'
+import { colors } from './pages/components/style';
 
 const chainIcons = {} as {[chainId: string]: string}
 const tokenIcons = {} as {[address: string]: string}
@@ -149,9 +150,9 @@ const useStore = () => {
 			placement:"center", 
 			duration: 1500,
 			animationType:"zoom-in", 
-			successColor:"#144858",
-			dangerColor:"#62220e",
-			warningColor:"#971c00",
+			successColor: colors.bgButton,
+			dangerColor: colors.danger,
+			warningColor: colors.bgModal,
 			normalColor:"#5a1a6a"
 		})
 	}

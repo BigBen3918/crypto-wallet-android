@@ -51,7 +51,7 @@ export default function ({close}: {close: any}) {
 		<Modal
 			close={close}
 			width={70}
-			title={"Base Currency"}
+			title={"Session AutoEnd Time"}
 		>
 			{autoLocks.map((i:any, k:number) => (
 				<OpacityButton style={{...grid.rowCenterBetween, ...grid.gridMargin2}} key={k} onPress={() => {updateSetting("autoLockTimer", Number(i.time))}}>

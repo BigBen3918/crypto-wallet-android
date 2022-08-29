@@ -240,9 +240,9 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 							</Wrap>
 						}
 					</Wrap>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton theme="danger" btnProps={{onPress: () => {navigation?.goBack()}}}>REJECT</DefaultButton>
-						<DefaultButton theme="warning" btnProps={{onPress: () => {send()}}}>CONFIRM</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} theme="danger" btnProps={{onPress: () => {navigation?.goBack()}}}>REJECT</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {send()}}}>CONFIRM</DefaultButton>
 					</Wrap>
 				</Wrap>
 			</FunctionLayout>

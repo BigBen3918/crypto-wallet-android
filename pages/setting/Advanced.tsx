@@ -73,9 +73,9 @@ export default function ({ navigation }: any) {
 				content={
 					<Wrap style={gstyle.titleEff}>
 						<OpacityButton style={{marginRight: w(2)}} onPress={()=>navigation?.goBack()}>
-							<Icon.ArrowLeft width={w(5)} height={w(5)} />
+							<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 						</OpacityButton>
-						<Content style={{...gstyle.title2}}>Advanced</Content>
+						<Content style={{...gstyle.title2, color: colors.white}}>Advanced</Content>
 					</Wrap>
 				}
 				hideHead
@@ -93,7 +93,7 @@ export default function ({ navigation }: any) {
 						<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Customize transaction nonce</Content>
 						<Content style={gstyle.textLight}>Turn this on to change the nonce (transaction number) on confirmation screens. This is an advanced feature, use cautiously</Content>
 						<Wrap style={grid.rowCenter}>
-							<Wrap><Switch thumbColor={colors.warning} onChange={() => updateSetting("showTxNonce", !setting.showTxNonce)} value={setting.showTxNonce} /></Wrap>
+							<Wrap><Switch thumbColor={colors.color} onChange={() => updateSetting("showTxNonce", !setting.showTxNonce)} value={setting.showTxNonce} /></Wrap>
 							<Content  style={gstyle.labelWhite}>{setting.showTxNonce ? "ON": "OFF"}</Content>
 						</Wrap>
 					</Wrap>
@@ -103,7 +103,7 @@ export default function ({ navigation }: any) {
 						<Content style={gstyle.textLight}>Select this to show the hex data field on the send screen</Content>
 						<Wrap style={grid.rowCenter}>
 							<Wrap>
-								<Switch thumbColor={colors.warning} onChange={() => updateSetting("showHexData", !setting.showHexData)} value={setting.showHexData} />
+								<Switch thumbColor={colors.color} onChange={() => updateSetting("showHexData", !setting.showHexData)} value={setting.showHexData} />
 							</Wrap>
 							<Content  style={gstyle.labelWhite}>{setting.showHexData ? "ON": "OFF"}</Content>
 						</Wrap>
@@ -114,7 +114,7 @@ export default function ({ navigation }: any) {
 						<Content style={gstyle.textLight}>Select this to show the test net on the network modal</Content>
 						<Wrap style={grid.rowCenter}>
 							<Wrap>
-								<Switch thumbColor={colors.warning} onChange={() => updateSetting("showTestnet", !setting.showTestnet)} value={setting.showTestnet} />
+								<Switch thumbColor={colors.color} onChange={() => updateSetting("showTestnet", !setting.showTestnet)} value={setting.showTestnet} />
 							</Wrap>
 							<Content  style={gstyle.labelWhite}>{setting.showTestnet ? "ON": "OFF"}</Content>
 						</Wrap>
@@ -128,9 +128,9 @@ export default function ({ navigation }: any) {
 				>
 					<Content style={gstyle.textLightCenter}>Resetting your account will clear your transaction activity.</Content>
 					<Wrap style={gstyle.hr2} />
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: () => updateStatus({resetAccountModal: false})}}>Cancel</DefaultButton>
-						<DefaultButton theme="danger" btnProps={{onPress: () => {resetAccount()}}}>Yes, reset</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress: () => updateStatus({resetAccountModal: false})}}>Cancel</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {resetAccount()}}}>Yes, reset</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

@@ -322,6 +322,22 @@ export const providerTransaction = (rpc: string, chainId: number, privateKey: st
 	})
 }
 
+export const getNonceAndGasPrice = (rpc: string, from: string): Promise<any> =>  {
+	return new Promise((async response => {
+		try {
+			let params = [] as object[];
+			params.push({jsonrpc: "2.0", method: "eth_getTransactionCount", params: [from, 	"pending"], id: 1})
+			params.push({jsonrpc: "2.0", method: "eth_gasPrice", params: [], id: 2})
+			let rows = await callRpc(rpc, params)
+			if(rows) {
+				response({nonce: rows[0].result, gasPrice:rows[1].result})
+			}
+		} catch(err) {
+			response(0)
+		}
+	}))
+}
+
 export const estimateNftSend = (rpc: string, from: string, to:string, contractAddress: string, tokenId: string): Promise<any> =>  {
 	return new Promise((async response => {
 		try {

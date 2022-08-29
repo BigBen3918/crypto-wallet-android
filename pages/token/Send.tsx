@@ -1,17 +1,20 @@
 import React from "react"
 import { isValidAddress } from "ethereumjs-util"
-import { colors, grid, gstyle, h, w } from "../components/style"
+import { colors, gfont, grid, gstyle, h, w } from "../components/style"
 import { DefaultButton, DefaultInput } from "../components/elements"
-import { Content, OpacityButton,  Wrap } from "../components/commons"
+import { Content, Input, OpacityButton,  Picture,  Wrap } from "../components/commons"
 import Avatar from "../components/avatar"
+import Barcode from '../components/captureqr'
 import AccountModal from "../layouts/AccountModal"
 import FunctionLayout from "../layouts/FunctionLayout"
 import useStore, { ellipsis } from "../../useStore"
+import captureIcon from '../../assets/scanning.png'
 
 interface SendStatus {
 	accountModal: 	boolean
 	to:				string
 	showMyAccounts:	boolean
+	scanned:		boolean
 }
 
 export default function ({ route, navigation }: any) {
@@ -20,7 +23,8 @@ export default function ({ route, navigation }: any) {
 	const [status, setStatus] = React.useState<SendStatus>({
 		accountModal:	false,
 		to:				"",
-		showMyAccounts:	false
+		showMyAccounts:	false,
+		scanned:		true
 	})
 
 	const updateStatus = (params:{[key:string]:string|number|boolean|any}) => setStatus({...status, ...params});
@@ -35,6 +39,16 @@ export default function ({ route, navigation }: any) {
 		if(status.to === "") return showToast("Please input receive address", "warning")
 		if(!isValidAddress(status.to)) return showToast("Invalid public address", "warning")
 		navigation?.navigate('SendAmount', {page, tokenAddress, to: status.to, tokenId, selectedNftIndex})
+	}
+
+	const setToAddress = (data: any) => {
+		try {
+			let uri = data['data'] || '';
+			if(!isValidAddress(uri)) uri = ''
+			updateStatus({scanned: true, to: uri})
+		} catch (err) {
+			updateStatus({scanned: true, to: ''})
+		}
 	}
 
 	return (
@@ -68,28 +82,40 @@ export default function ({ route, navigation }: any) {
 								</OpacityButton>
 							</Wrap>
 						</Wrap>
-						<Wrap style={{alignSelf: "stretch", flexDirection: "row", alignItems: "center"}}>
+						<Wrap style={{alignSelf: "stretch", flexDirection: "row", alignItems: "center", marginTop: h(3), marginBottom: h(3)}}>
 							<Wrap style={{width: w(15)}}>
 								<Content style={gstyle.labelWhite}>To:</Content>
 							</Wrap>
 							<Wrap style={{flex: 1}}>
-								<DefaultInput
-									inputProps={{
-										value: status.to,
-										onChangeText: (txt:string) => updateStatus({to: txt }),
-										placeholderTextColor: colors.placeholder,
-										placeholder: "Search, public address (0x)",
-										style: {...gstyle.labelWhite}
-									}}
-									visibleValue={false}
-								/>
+								<Wrap style={{...grid.rowCenterCenter,...grid.gridMargin2, backgroundColor: 'rgba(0, 0, 0, 0.8)'}}>
+									<Input
+										style={{
+											...gfont.t,
+											flex: 1,
+											color: colors.white,
+											height: h(7),
+											paddingLeft: w(3)
+										}}
+										placeholderTextColor={colors.placeholder}
+										value=  {status.to}
+										onChangeText= {(txt:string) => updateStatus({to: txt })}
+										placeholder= {"Search, public address (0x)"}
+									/>
+									<Wrap style={{paddingLeft: w(3), paddingRight: w(3)}}>
+										<OpacityButton onPress={() => {updateStatus({scanned: false})}}>
+											<Picture source={captureIcon} style={{width:w(5), height:w(5)}}/>
+										</OpacityButton>
+									</Wrap>
+								</Wrap>
 							</Wrap>
 						</Wrap>
 					</Wrap>
 
 					<Wrap style={{...grid.rowCenterCenter, paddingBottom: h(2)}}>
 						<Wrap style={{flex: 1}}>
-							{recents.length > 0 && <Content style={{...gstyle.labelWhite, paddingLeft: w(5)}}>Recents</Content>}
+							{recents.length > 0 && <Content style={{...gstyle.labelWhite, paddingLeft: w(5)}}>Recen
+							
+							ts</Content>}
 							{
 								 recents.map((account, index) => {
 									if(account !== currentAccount) return <Wrap key={"ab" + index}>
@@ -167,6 +193,13 @@ export default function ({ route, navigation }: any) {
 			{status.accountModal && (
 				<AccountModal close={() => updateStatus({accountModal: false})} navigation={navigation} />
 			)}
+			{
+				!status.scanned && (
+					<>
+						<Barcode onScanned={(data:string)=>{setToAddress(data)}} />
+					</>
+				)
+			}
 		</>
 	)
 }

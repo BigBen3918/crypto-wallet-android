@@ -93,13 +93,13 @@ export default function ({ navigation }: any) {
 					<Content style={gstyle.labelWhite}>Must be at least 8 characters</Content>
 				}
 			/>
-			<Wrap style={style.rememberMe}>
+			{/* <Wrap style={style.rememberMe}>
 				<Content style={gstyle.labelWhite}>Remember me</Content>
 				<Wrap style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
 					<Wrap><Switch thumbColor={colors.warning} onChange={() => updateStatus({ isRemember: !status.isRemember})} value={status.isRemember} /></Wrap>
 					<Content style={gstyle.labelWhite}>{status.isRemember ? "ON": "OFF"}</Content>
 				</Wrap>
-			</Wrap>
+			</Wrap> */}
 			<Wrap style={grid.btnGroup}>
 				<DefaultButton btnProps={{onPress: submit}}>Import</DefaultButton>
 			</Wrap>

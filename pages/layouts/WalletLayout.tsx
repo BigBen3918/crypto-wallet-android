@@ -233,9 +233,9 @@ export default function ({ navigation, menuKey, title, content, children, footer
 							style:{borderColor: colors.color, borderWidth: w(0.1)}
 						}}
 					></DefaultInput>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
-						<DefaultButton theme="warning" btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

@@ -170,9 +170,9 @@ export default function ({ navigation }: any) {
 					<Wrap style={{...gstyle.titleEff, ...grid.rowCenterBetween}}>   
 						<Wrap style={grid.rowCenter}>
 							<OpacityButton style={{marginRight: w(2)}} onPress={()=>navigation?.goBack()}>
-								<Icon.ArrowLeft width={w(5)} height={w(5)} />
+								<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 							</OpacityButton>
-							<Content style={{...gstyle.title2}}>Networks</Content>
+							<Content style={{...gstyle.title2, color: colors.white}}>Networks</Content>
 						</Wrap>
 						<DefaultButton width={w(7)} height={5} hideMargin btnProps={{onPress: () => updateStatus({showAddModal: true})}}>Add</DefaultButton>
 					</Wrap>
@@ -196,7 +196,7 @@ export default function ({ navigation }: any) {
 						</Wrap>
 						<DefaultInput 
 							label={(
-								<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Network Name</Content>
+								<Content style={{...gstyle.textLight, paddingTop: h(1)}}>Network Name</Content>
 							)}
 							visibleValue={false}
 							inputProps={{
@@ -206,7 +206,7 @@ export default function ({ navigation }: any) {
 						/>
 						<DefaultInput 
 							label={(
-								<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>New RPC URL</Content>
+								<Content style={{...gstyle.textLight, paddingTop: h(1)}}>New RPC URL</Content>
 							)}
 							visibleValue={false}
 							inputProps={{
@@ -216,7 +216,7 @@ export default function ({ navigation }: any) {
 						/>
 						<DefaultInput 
 							label={(
-								<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Chain ID</Content>
+								<Content style={{...gstyle.textLight, paddingTop: h(1)}}>Chain ID</Content>
 							)}
 							visibleValue={false}
 							inputProps={{
@@ -226,7 +226,7 @@ export default function ({ navigation }: any) {
 						/>
 						<DefaultInput 
 							label={(
-								<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Symbol</Content>
+								<Content style={{...gstyle.textLight, paddingTop: h(1)}}>Symbol</Content>
 							)}
 							visibleValue={false}
 							inputProps={{
@@ -236,7 +236,7 @@ export default function ({ navigation }: any) {
 						/>
 						<DefaultInput 
 							label={(
-								<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Block Explorer URL</Content>
+								<Content style={{...gstyle.textLight, paddingTop: h(1)}}>Block Explorer URL</Content>
 							)}
 							visibleValue={false}
 							inputProps={{
@@ -287,7 +287,8 @@ export default function ({ navigation }: any) {
 								inputProps={{
 									placeholder: "Network Name (optional)",
 									onChangeText: (txt:string) => updateStatus({inputName: txt}),
-									value: status.inputName
+									value: status.inputName,
+									style:{borderColor:colors.color, borderWidth: w(0.1)}
 								}}
 							/>
 							<DefaultInput 
@@ -298,7 +299,8 @@ export default function ({ navigation }: any) {
 								inputProps={{
 									onChangeText: (txt:string) => updateStatus({inputRpc: txt}),
 									value: status.inputRpc,
-									placeholder: "New RPC Network"
+									placeholder: "New RPC Network",
+									style:{borderColor:colors.color, borderWidth: w(0.1)}
 								}}
 							/>
 							<DefaultInput 
@@ -309,7 +311,8 @@ export default function ({ navigation }: any) {
 								inputProps={{
 									onChangeText: (txt:string) => updateStatus({inputChainId: txt}),
 									value: status.inputChainId,
-									placeholder: "Chain ID"
+									placeholder: "Chain ID",
+									style:{borderColor:colors.color, borderWidth: w(0.1)}
 								}}
 							/>
 							<DefaultInput 
@@ -320,7 +323,8 @@ export default function ({ navigation }: any) {
 								inputProps={{
 									onChangeText: (txt:string) => updateStatus({inputSymbol: txt}),
 									value: status.inputSymbol,
-									placeholder: "Symbol (optional)"
+									placeholder: "Symbol (optional)",
+									style:{borderColor:colors.color, borderWidth: w(0.1)}
 								}}
 							/>
 							<DefaultInput 
@@ -331,12 +335,13 @@ export default function ({ navigation }: any) {
 								inputProps={{
 									onChangeText: (txt:string) => updateStatus({inputExplorer: txt}),
 									value: status.inputExplorer,
-									placeholder: "Block Explorer URL (optional)"
+									placeholder: "Block Explorer URL (optional)",
+									style:{borderColor:colors.color, borderWidth: w(0.1)}
 								}}
 							/>
-							<Wrap style={grid.btnGroup}>
-								<DefaultButton btnProps={{onPress: () => updateStatus({inputName:"", inputRpc:"", inputSymbol:"", inputExplorer: "", inputChainId: "", showAddModal: false})}}>Cancel</DefaultButton>
-								<DefaultButton btnProps={{onPress: () => addNetwork()}} theme="warning">Add</DefaultButton>
+							<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+								<DefaultButton width={40} btnProps={{onPress: () => updateStatus({inputName:"", inputRpc:"", inputSymbol:"", inputExplorer: "", inputChainId: "", showAddModal: false})}}>Cancel</DefaultButton>
+								<DefaultButton width={40} btnProps={{onPress: () => addNetwork()}} theme="warning">Add</DefaultButton>
 							</Wrap>
 						</>
 					)}
@@ -363,9 +368,9 @@ export default function ({ navigation }: any) {
 							<Content style={{...gstyle.textLight, fontWeight: "700"}}>{DEFAULT_IMPORT_NETWORKS[status.selectPopularIndex].rpc}</Content>
 						</Wrap>
 					</Wrap>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: () => {updateStatus({showDetailsModal: false, selectPopularIndex: 0})}}}>Cancel</DefaultButton>
-						<DefaultButton btnProps={{onPress: () => {addPopularNetwork(status.selectPopularIndex)}}} theme="danger">Approve</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress: () => {updateStatus({showDetailsModal: false, selectPopularIndex: 0})}}}>Cancel</DefaultButton>
+						<DefaultButton width={40} btnProps={{onPress: () => {addPopularNetwork(status.selectPopularIndex)}}} theme="danger">Approve</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}
@@ -377,9 +382,9 @@ export default function ({ navigation }: any) {
 					<Wrap style={grid.gridMargin3}>
 						<Content style={gstyle.textLight}>Are you sure you want to delete this network?</Content>
 					</Wrap>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: () => updateStatus({showDeleteModal: false, removeKey: ""})}}>Cancel</DefaultButton>
-						<DefaultButton theme="danger" btnProps={{onPress: () => {removeNetwork()}}}>Delete</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40}  btnProps={{onPress: () => updateStatus({showDeleteModal: false, removeKey: ""})}}>Cancel</DefaultButton>
+						<DefaultButton width={40} theme="danger" btnProps={{onPress: () => {removeNetwork()}}}>Delete</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

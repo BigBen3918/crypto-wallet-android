@@ -112,7 +112,7 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 		danger: {
 			origin: colors.danger,
 			disabled: colors.bgDisable,
-			color: colors.color,
+			color: colors.white,
 			colorDisabled: colors.colorDisable
 		}
 	}
@@ -151,7 +151,6 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 						height: h(2),
 					},
 					shadowOpacity: 1,
-	
 					elevation: 5,
 					backgroundColor: !btnProps?.disabled ? themeColors[theme].origin : themeColors[theme].disabled,
 				}}

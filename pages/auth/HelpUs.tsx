@@ -21,9 +21,9 @@ export default function ({ navigation }: any) {
 			footer={(
 				<>
 					<Wrap style={gstyle.hr} />
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: submit}}>No Thanks</DefaultButton>
-						<DefaultButton theme="warning" btnProps={{onPress: submit}}>I Agree</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress: submit}}>No Thanks</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: submit}}>I Agree</DefaultButton>
 					</Wrap>
 				</>
 			)}

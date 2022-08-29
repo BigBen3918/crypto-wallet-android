@@ -343,9 +343,9 @@ export default function ({ navigation }: any) {
 							onChangeText: (txt:string) => updateStatus({accountLabel: txt})
 						}}
 					></DefaultInput>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
-						<DefaultButton theme="warning" btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

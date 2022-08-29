@@ -69,13 +69,13 @@ export default function ({ navigation }: any) {
 									}}
 									visibleValue
 								/>
-								<Wrap style={{...grid.rowCenterBetween, ...grid.gridMargin3}}>
+								{/* <Wrap style={{...grid.rowCenterBetween, ...grid.gridMargin3}}>
 									<Content style={gstyle.labelWhite}>Remember me</Content>
 									<Wrap style={grid.rowCenterCenter}>
 										<Wrap><Switch thumbColor={colors.warning} onChange={() => updateStatus({isRemember: !status.isRemember})} value={status.isRemember} /></Wrap>
 										<Content style={gstyle.labelWhite}>{status.isRemember ? "ON": "OFF"}</Content>
 									</Wrap>
-								</Wrap>
+								</Wrap> */}
 								<Wrap style={{marginBottom: h(7)}}>
 									<Wrap style={grid.btnGroup}>
 										<DefaultButton btnProps={{onPress: () => { checkPass() }}} >UNLOCK</DefaultButton>
@@ -99,9 +99,9 @@ export default function ({ navigation }: any) {
 						<Content style={gstyle.textLightCenter}>Your current wallet, accounts and assets will be <Content style={gstyle.bold}>removed from this app permanently</Content>. This action cannot be undone.</Content>
 					</Wrap>
 					<Content style={gstyle.textLightCenter}>You can ONLY recover this wallet with your <Content style={gstyle.bold}>Secret Recovery Phrase</Content> ICICBWallet does not have your Secret Recovery Phrase.</Content>
-					<Wrap style={grid.btnGroup}>
-						<DefaultButton btnProps={{onPress:() => {updateStatus({showRemoveWalletWarning: false})}}}>Cancel</DefaultButton>
-						<DefaultButton theme="warning" btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>
+					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
+						<DefaultButton width={40} btnProps={{onPress:() => {updateStatus({showRemoveWalletWarning: false})}}}>Cancel</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

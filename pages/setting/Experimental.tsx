@@ -43,9 +43,9 @@ export default function ({ navigation }: any) {
 			content={
 				<Wrap style={gstyle.titleEff}>
 					<OpacityButton style={{marginRight: w(2)}} onPress={()=>navigation?.goBack()}>
-						<Icon.ArrowLeft width={w(5)} height={w(5)} />
+						<Icon.ArrowLeft width={w(5)} height={w(5)} color={colors.color}/>
 					</OpacityButton>
-					<Content style={{...gstyle.title2}}>Experimental</Content>
+					<Content style={{...gstyle.title2, color: colors.white}}>Experimental</Content>
 				</Wrap>
 			}
 			hideHead
@@ -55,7 +55,7 @@ export default function ({ navigation }: any) {
 					<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Wallet Connect Sessions</Content>
 					<Content style={gstyle.textLight}>View the list of active WalletConnect sessions</Content>
 					<Wrap style={grid.gridMargin2}>
-						<DefaultButton width={90} theme="warning" btnProps={{ onPress: ()=>navigation.navigate("ViewSessions")}}>View Sessions</DefaultButton>
+						<DefaultButton width={90}  btnProps={{ onPress: ()=>navigation.navigate("ViewSessions")}}>View Sessions</DefaultButton>
 					</Wrap>
 				</Wrap>
 				<Wrap style={gstyle.hr2} />
@@ -63,7 +63,7 @@ export default function ({ navigation }: any) {
 					<Content style={{...gstyle.textLightLg, paddingTop: h(1)}}>Enable Enchanced Gas Fee UI</Content>
 					<Content style={gstyle.textLight}>We’ve upgraded how gas estimation and customization works. Turn on if you’d like to use the new gas experience. <Content style={gstyle.link} onPress={() => {navigation?.navigate('WebView', {url: "https://docs.ICICBWallet.io/guide/"})}}>Learn more</Content></Content>
 					<Wrap style={grid.rowCenter}>
-						<Wrap><Switch thumbColor={colors.warning} onChange={() => updateSetting("enhancedGasFeeUI", !setting.enhancedGasFeeUI)} value={setting.enhancedGasFeeUI} /></Wrap>
+						<Wrap><Switch thumbColor={colors.color} onChange={() => updateSetting("enhancedGasFeeUI", !setting.enhancedGasFeeUI)} value={setting.enhancedGasFeeUI} /></Wrap>
 						<Content  style={gstyle.labelWhite}>{setting.enhancedGasFeeUI ? "ON": "OFF"}</Content>
 					</Wrap>
 				</Wrap>
