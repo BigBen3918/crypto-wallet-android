@@ -71,7 +71,7 @@ export default function ({route,  navigation }: any) {
 				}
 				title="Write down your secret recovery phrase"
 			>
-				<Wrap style={{marginTop: h(5)}}>
+				<Wrap style={{marginTop: h(3)}}>
 					<Content style={gstyle.textLightCenter}>This is your Secret Recovery Phrase. Write it down on a paper and keep it in a safe place. You’ll be asked to re-enter this phrase (in order) on the next step.</Content>
 					<Wrap style={grid.panel}>
 						{!status.showPhrase ? (
@@ -82,7 +82,7 @@ export default function ({route,  navigation }: any) {
 								<Content style={{...gstyle.textLightLgCenter, textTransform: "uppercase"}}>Tap to reveal your Secret Recovery Phrase</Content>
 								<Content style={gstyle.textLightCenter}>Make sure no one is watching your screen.</Content>
 								<Wrap style={grid.btnGroup}>
-									<DefaultButton btnProps={{onPress: viewPhrase}}><Content>Wrap</Content></DefaultButton>
+									<DefaultButton theme="warning" btnProps={{onPress: viewPhrase}}><Content>Wrap</Content></DefaultButton>
 								</Wrap>
 							</>
 						) : (

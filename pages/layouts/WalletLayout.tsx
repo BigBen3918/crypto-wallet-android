@@ -50,7 +50,7 @@ export default function ({ navigation, menuKey, title, content, children, footer
 	const {currentAccount, accounts, setting, currentNetwork, networks, showToast, update} = useStore()
 		
 	const menuItems = [
-		[{ key: "wallet",		 icon: (color:string) => <Icon.Wallet2 color={color} />,   label: "Wallet",				 event: () => {update({browser: false})}}],
+		// [{ key: "wallet",		 icon: (color:string) => <Icon.Wallet2 color={color} />,   label: "Wallet",				 event: () => {update({browser: false})}}],
 		[{ key: "viewetherscan",  icon: (color:string) => <Icon.Eye color={color} />,	   label: "View on explorer",	  event: () => {viewOnExplorer()}}],
 		[{ key: "settings",		icon: (color:string) => <Icon.Setting color={color} />,   label: "Settings",				event: () => {navigation.navigate("Setting")}}],
 		[{ key: "support",		   icon: (color:string) => <Icon.Support color={color} />, label: "Support",				   event: () => {navigation?.navigate('WebView', {url: "https://docs.icicbwallet.io/guide/"})} }],
@@ -106,8 +106,8 @@ export default function ({ navigation, menuKey, title, content, children, footer
 						<OpacityButton onPress={onMenu}>
 							<Picture source={Menu} style={{ width: w(6), height: w(4) }} />
 						</OpacityButton>
-						<OpacityButton style={{paddingLeft: w(0), paddingTop: h(2)}} onPress={() => navigation.navigate("WalletTokens")}>
-							<Picture source={Logo} style={{ width: w(25), height: w(10) }} />
+						<OpacityButton style={{paddingLeft: w(0)}} onPress={() => navigation.navigate("WalletTokens")}>
+							<Picture source={Logo} style={{ width: w(24), height: w(9) }} />
 						</OpacityButton>
 						<OpacityButton onPress={walletConnect}>
 							<Picture source={Search} style={{ width: w(6), height: w(6) }} />
@@ -129,7 +129,7 @@ export default function ({ navigation, menuKey, title, content, children, footer
 						<Wrap style={style.container}>
 							<ButtonWithoutFeedback onPress={()=>{}}>
 								<Wrap style={{flex: 1, width: w(70), backgroundColor: colors.bgModal}}>
-									<OpacityButton style={{paddingTop: h(2), display:'flex', flexDirection:'row', justifyContent:'center'}} onPress={() => navigation.navigate("WalletTokens")}>
+									<OpacityButton style={{paddingTop: h(5), display:'flex', flexDirection:'row', justifyContent:'center'}} onPress={() => navigation.navigate("WalletTokens")}>
 										<Picture source={SideLogo} style={{ width: w(22), height: w(8) }} />
 									</OpacityButton>
 									<ScrollWrap>
@@ -184,12 +184,12 @@ export default function ({ navigation, menuKey, title, content, children, footer
 														<Content style={{...gstyle.labelWhite, paddingLeft: w(2)}}>Send</Content>
 													</OpacityButton>
 												</Wrap>
-												<Wrap style={{alignSelf: "stretch", height: h(0.1), backgroundColor: colors.color}} />
+												<Wrap style={{alignSelf: "stretch", height: h(0.1), backgroundColor: colors.color, marginTop: h(5)}} />
 												<Wrap style={style.menu}>
 													{menuItems.map((g:any, gk:number) => (
 														<Wrap key={"gks" + gk}>
 															{g.map((i:any, k:number) => (
-																<OpacityButton key={"key" + k} style={{...style.item, backgroundColor: menuKey === i.key ? colors.border : "auto"}} onPress={() => {updateStatus({showMenu: false}); i.event()}}>
+																<OpacityButton key={"key" + k} style={{...style.item, }} onPress={() => {updateStatus({showMenu: false}); i.event()}}>
 																	<Wrap style={{marginRight: w(1)}}>
 																		{i.icon(menuKey === i.key ? colors.warning : colors.color)}
 																	</Wrap>
@@ -234,8 +234,8 @@ export default function ({ navigation, menuKey, title, content, children, footer
 						}}
 					></DefaultInput>
 					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-						<DefaultButton width={40} btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
-						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
+						<DefaultButton width={40}  btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

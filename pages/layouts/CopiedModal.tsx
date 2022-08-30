@@ -20,7 +20,7 @@ export default function ({close}:CopiedModalProps) {
 			hideCloseButton
 		>
 			<Wrap style={{...grid.rowCenterCenter, marginLeft: w(4)}}>
-				<Wrap style={{}}><Icon.Check color={colors.warning} width={50} height={50} /></Wrap>
+				<Wrap style={{}}><Icon.Check color={colors.bgButton} width={50} height={50} /></Wrap>
 			</Wrap>
 			<Content style={{...gstyle.textLightCenter, textTransform: "uppercase"}}>Public address copied to clipboard</Content>
 		</Modal>

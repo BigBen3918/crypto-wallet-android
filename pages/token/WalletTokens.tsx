@@ -167,11 +167,11 @@ export default function ({ navigation }: any) {
 					</Wrap>
 					<Wrap style={grid.colBetween}>
 						<Wrap style={grid.rowCenterAround}>
-							<OpacityButton style={{flex: 1,  backgroundColor:  (status.tabKey === "tokens" ? colors.color : "#64410d"),  paddingTop: h(1.6), borderTopLeftRadius: w(2), borderTopRightRadius: w(2)}} onPress={() => updateStatus({tabKey: "tokens"})}>
-								<Content style={{...gstyle.textLightCenter, color:(status.tabKey === "tokens" ? colors.bgButton : "#ddd")}}>TOKENS</Content>
+							<OpacityButton style={{flex: 1,  backgroundColor:  (status.tabKey === "tokens" ? colors.color : "#534326"),  paddingTop: h(1.6), borderTopLeftRadius: w(2), borderTopRightRadius: w(2)}} onPress={() => updateStatus({tabKey: "tokens"})}>
+								<Content style={{...gstyle.textLightCenter, color: colors.black}}>TOKENS</Content>
 							</OpacityButton>
-							<OpacityButton style={{flex: 1,  backgroundColor: (status.tabKey === "nfts" ? colors.color: "#64410d" ),paddingTop: h(1.6), borderTopLeftRadius: w(2), borderTopRightRadius: w(2)}} onPress={() => updateStatus({tabKey: "nfts"})}>
-								<Content style={{...gstyle.textLightCenter, color:(status.tabKey === "nfts" ? colors.bgButton : "#ddd")}}>NFT'S</Content>
+							<OpacityButton style={{flex: 1,  backgroundColor: (status.tabKey === "nfts" ? colors.color: "#534326" ),paddingTop: h(1.6), borderTopLeftRadius: w(2), borderTopRightRadius: w(2)}} onPress={() => updateStatus({tabKey: "nfts"})}>
+								<Content style={{...gstyle.textLightCenter, color: colors.black}}>NFT'S</Content>
 							</OpacityButton>
 						</Wrap>
 						{status.tabKey === "tokens" && (
@@ -344,8 +344,8 @@ export default function ({ navigation }: any) {
 						}}
 					></DefaultInput>
 					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-						<DefaultButton width={40} btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
-						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => updateStatus({showChangeAccountNameModal: false})}}>Cancel</DefaultButton>
+						<DefaultButton width={40}  btnProps={{onPress: () => {setAccountName()}}}>Change</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

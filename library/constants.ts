@@ -129,26 +129,7 @@ export const DEFAULT_NETWORKS = [
 ] as NetworkObject[]
 
 export const DEFAULT_IMPORT_NETWORKS = [
-	{
-		chainKey:			"ethereum",
-		testnet:			false,
-		label: 				"Ethereum Mainnet",
-		rpc: 				"https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
-		chainId: 			1,
-		symbol: 			"ETH",
-		url: 				"https://etherscan.io/",
-		imported:			true,
-	},
-	{
-		chainKey:			"binancemainnet",
-		testnet:			false,
-		label: 				"Binance Smart Chain Mainnet",
-		rpc: 				"https://bsc.mytokenpocket.vip",
-		chainId: 			56,
-		symbol: 			"BNB",
-		url: 				"https://bscscan.com/",
-		imported:			true,
-	},
+	
 	{
 		chainKey:			"avalanche",
 		testnet:			false,
@@ -197,36 +178,6 @@ export const DEFAULT_IMPORT_NETWORKS = [
 		chainId: 			1285,
 		symbol: 			"MOVR",
 		url: 				"https://moonriver.moonscan.io/",
-		imported:			true,
-	},
-	{
-		chainKey:			"rinkeby",
-		testnet:			true,
-		label: 				"Rinkeby Testnet",
-		rpc: 				"https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-		chainId: 			4,
-		symbol: 			"ETH",
-		url: 				"https://rinkeby.etherscan.io/",
-		imported:			true,
-	},
-	{
-		chainKey:			"ropsten",
-		testnet:			true,
-		label: 				"Ropsten Testnet",
-		rpc: 				"https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-		chainId: 			3,
-		symbol: 			"ETH",
-		url: 				"https://ropsten.etherscan.io/",
-		imported:			true,
-	},
-	{
-		chainKey:			"Kovan",
-		testnet:			true,
-		label: 				"Kovan Testnet",
-		rpc: 				"ws://kovan.poa.network:8546",
-		chainId: 			42,
-		symbol: 			"ETH",
-		url: 				"https://kovan.etherscan.io/",
 		imported:			true,
 	},
 	{

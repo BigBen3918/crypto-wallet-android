@@ -1,9 +1,8 @@
 import React from "react"
-import { Switch } from "react-native-paper"
-import { colors, grid, gstyle, h, w } from "../components/style"
+import { grid, gstyle, h, w } from "../components/style"
 import { DefaultButton, DefaultInput, Modal } from "../components/elements"
 import { BgImage, Content, OpacityButton,  Picture,  ScrollWrap, Wrap } from "../components/commons"
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/icicb_logo.png'
 import {initialState} from '../../reducer'
 import  useStore, { decrypt, hmac } from '../../useStore'
 
@@ -57,7 +56,7 @@ export default function ({ navigation }: any) {
 								<Wrap style={{alignSelf: "center"}}>
 									<Picture source={Logo} style={{width:w(25), height:w(10)}}/>				
 								</Wrap>
-								<Content style={gstyle.title}>Welcome Back!</Content>
+								<Content style={{...gstyle.title, color:"white", marginTop: h(10)}}>Welcome Back!</Content>
 								<DefaultInput
 									label="Password"
 									inputProps={{
@@ -81,7 +80,8 @@ export default function ({ navigation }: any) {
 										<DefaultButton btnProps={{onPress: () => { checkPass() }}} >UNLOCK</DefaultButton>
 									</Wrap>
 								</Wrap>
-								<Content style={gstyle.textLightCenter}>Wallet won't unlock? You can ERASE your wallet and setup a new one</Content>
+								<Content style={gstyle.textLightCenter}>Wallet won't unlock?</Content>
+								<Content style={gstyle.textLightCenter}>You can ERASE your wallet and setup a new one</Content>
 								<OpacityButton onPress={() => updateStatus({showRemoveWalletWarning: true})}>
 									<Content style={gstyle.linkCenter}>Reset Wallet</Content>
 								</OpacityButton>
@@ -100,8 +100,8 @@ export default function ({ navigation }: any) {
 					</Wrap>
 					<Content style={gstyle.textLightCenter}>You can ONLY recover this wallet with your <Content style={gstyle.bold}>Secret Recovery Phrase</Content> ICICBWallet does not have your Secret Recovery Phrase.</Content>
 					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-						<DefaultButton width={40} btnProps={{onPress:() => {updateStatus({showRemoveWalletWarning: false})}}}>Cancel</DefaultButton>
-						<DefaultButton width={40} theme="warning" btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>
+						<DefaultButton width={40} theme="warning"  btnProps={{onPress:() => {updateStatus({showRemoveWalletWarning: false})}}}>Cancel</DefaultButton>
+						<DefaultButton width={40} btnProps={{onPress:() => {resetWallet()}}}>Remove Wallet</DefaultButton>
 					</Wrap>
 				</Modal>
 			)}

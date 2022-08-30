@@ -113,7 +113,7 @@ export default function ({close, navigation}: any) {
 							<DefaultButton btnProps={{onPress: () => updateStatus({showConfirmPassModal: true, password:""})}}>Create new account</DefaultButton>
 						</Wrap>
 						<Wrap style={grid.btnGroup}>
-							<DefaultButton btnProps={{onPress: () => {navigation?.navigate("ImportAccount"); close()}}}>Import an account</DefaultButton>
+							<DefaultButton theme="warning" btnProps={{onPress: () => {navigation?.navigate("ImportAccount"); close()}}}>Import an account</DefaultButton>
 						</Wrap>
 					</>
 				)}

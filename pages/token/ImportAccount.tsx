@@ -136,8 +136,8 @@ export default function ({ navigation }: any) {
 						visibleValue={true}
 					/>
 					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-						<DefaultButton width={40} btnProps={{onPress: goBack}}>Cancel</DefaultButton>
-						<DefaultButton width={40} theme="warning" btnProps={{onPress: ()=>{importAccount()}}}>Import</DefaultButton>
+						<DefaultButton width={40} theme="warning"  btnProps={{onPress: goBack}}>Cancel</DefaultButton>
+						<DefaultButton width={40} btnProps={{onPress: ()=>{importAccount()}}}>Import</DefaultButton>
 					</Wrap>
 				</Wrap>
 			</FunctionLayout>

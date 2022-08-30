@@ -22,8 +22,8 @@ export default function ({ navigation }: any) {
 				<>
 					<Wrap style={gstyle.hr} />
 					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-						<DefaultButton width={40} btnProps={{onPress: submit}}>No Thanks</DefaultButton>
-						<DefaultButton width={40} theme="warning" btnProps={{onPress: submit}}>I Agree</DefaultButton>
+						<DefaultButton width={40} theme="warning"  btnProps={{onPress: submit}}>No Thanks</DefaultButton>
+						<DefaultButton width={40} btnProps={{onPress: submit}}>I Agree</DefaultButton>
 					</Wrap>
 				</>
 			)}

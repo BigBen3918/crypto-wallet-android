@@ -225,8 +225,8 @@ export default function ({navigation} : any) {
 							</Wrap>
 						</Wrap>
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-							<DefaultButton width={40} theme="danger" btnProps={{onPress: () => {rejectRequest(), close()}}}>Cancel</DefaultButton>
-							<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {approveRequest()}}}>Connect</DefaultButton>
+							<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {rejectRequest(), close()}}}>Cancel</DefaultButton>
+							<DefaultButton width={40} btnProps={{onPress: () => {approveRequest()}}}>Connect</DefaultButton>
 						</Wrap>
 					</Wrap>
                 </BgImage>

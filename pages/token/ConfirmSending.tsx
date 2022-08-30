@@ -132,12 +132,13 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 				title={"Sending " + symbol}
 				hideClose
 				content={(
-					<OpacityButton style={{marginLeft: w(2)}} onPress={() => navigation.goBack()}>
+					<OpacityButton style={{marginLeft: w(2), display:'flex', flexDirection:'row'}} onPress={() => navigation.goBack()}>
 						<Icon.ArrowLeft width={w(5)} height={w(5)} />
+						<Content style={gstyle.textLight}>Back</Content>
 					</OpacityButton>
 				)}
 			>
-				<Wrap style={{paddingLeft: w(5), paddingRight: w(5)}}>
+				<Wrap style={{marginLeft: w(2), paddingTop: h(5), paddingBottom: h(5),paddingLeft: w(5), marginRight: w(2), paddingRight: w(5), backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: w(1), borderColor: colors.color,  borderWidth: w(0.05)}}>
 					<Wrap style={{...grid.rowCenterAround, ...grid.gridMargin2}}>
 						<Wrap style={{flex: 1, paddingRight: w(5), paddingLeft: w(5)}}>
 							<Wrap style={{backgroundColor: colors.bgLight, paddingTop: h(2), paddingBottom: h(2), borderRadius: w(1)}}>
@@ -241,8 +242,8 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 						}
 					</Wrap>
 					<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-						<DefaultButton width={40} theme="danger" btnProps={{onPress: () => {navigation?.goBack()}}}>REJECT</DefaultButton>
-						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {send()}}}>CONFIRM</DefaultButton>
+						<DefaultButton width={40} theme="warning" btnProps={{onPress: () => {navigation?.goBack()}}}>REJECT</DefaultButton>
+						<DefaultButton width={40}  btnProps={{onPress: () => {send()}}}>CONFIRM</DefaultButton>
 					</Wrap>
 				</Wrap>
 			</FunctionLayout>

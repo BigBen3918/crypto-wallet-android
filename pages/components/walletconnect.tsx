@@ -627,8 +627,8 @@ const WalletConnectDetect =  () => {
 						<Content style={gstyle.textLightCenter}>Rpc: {status.params?.chain?.rpcUrls[0] || ""}</Content>
 						<Content style={gstyle.textLightCenter}>Explorer: {status.params?.chain?.blockExplorerUrls[0] || ""}</Content>
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(2)}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {addNetwork(false)}}}>Reject</DefaultButton>
-							{status.params?.label && <DefaultButton width={40}  theme="warning" btnProps={{onPress: () => {addNetwork(true)}}}>Allow</DefaultButton>}
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {addNetwork(false)}}}>Reject</DefaultButton>
+							{status.params?.label && <DefaultButton width={40}  btnProps={{onPress: () => {addNetwork(true)}}}>Allow</DefaultButton>}
 						</Wrap>
 					</Modal>
 				)
@@ -688,8 +688,8 @@ const WalletConnectDetect =  () => {
 							visibleValue={true}
 						/>
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(2)}}>
-							<DefaultButton theme="danger"  width={40} btnProps={{onPress: () => {onEthSign(false)}}}>Reject</DefaultButton>
-							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {onEthSign(true)}}}>Allow</DefaultButton>
+							<DefaultButton theme="warning"  width={40} btnProps={{onPress: () => {onEthSign(false)}}}>Reject</DefaultButton>
+							<DefaultButton width={40} btnProps={{onPress: () => {onEthSign(true)}}}>Allow</DefaultButton>
 						</Wrap>
 					</Modal>
 				)
@@ -749,8 +749,8 @@ const WalletConnectDetect =  () => {
 							visibleValue={true}
 						/>
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(2)}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {onPersonalSign(false)}}}>Reject</DefaultButton>
-							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {onPersonalSign(true)}}}>Allow</DefaultButton>
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {onPersonalSign(false)}}}>Reject</DefaultButton>
+							<DefaultButton  width={40} btnProps={{onPress: () => {onPersonalSign(true)}}}>Allow</DefaultButton>
 						</Wrap>
 					</Modal>
 				)
@@ -822,8 +822,8 @@ const WalletConnectDetect =  () => {
 							visibleValue={true}
 						/>
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(1)}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {onSignTypeData(false)}}}>Reject</DefaultButton>
-							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {onSignTypeData(true)}}}>Allow</DefaultButton>
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {onSignTypeData(false)}}}>Reject</DefaultButton>
+							<DefaultButton width={40} btnProps={{onPress: () => {onSignTypeData(true)}}}>Allow</DefaultButton>
 						</Wrap>
 					</Modal>
 				)
@@ -842,8 +842,8 @@ const WalletConnectDetect =  () => {
 						<Content style={gstyle.textLightCenter}>ChainId: {status.params?.chainId || 0}</Content>
 						<Content style={gstyle.textLightCenter}>Network: {status.params?.label || ""}</Content>
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(2)}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {switchNetwork(false)}}}>Reject</DefaultButton>
-							{status.params?.label && <DefaultButton width={40} theme="warning" btnProps={{onPress: () => {switchNetwork(true)}}}>Allow</DefaultButton>}
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {switchNetwork(false)}}}>Reject</DefaultButton>
+							{status.params?.label && <DefaultButton width={40} btnProps={{onPress: () => {switchNetwork(true)}}}>Allow</DefaultButton>}
 						</Wrap>
 					</Modal>
 				)
@@ -980,8 +980,8 @@ const WalletConnectDetect =  () => {
 						}
 						
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(1)}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {sendTransaction(false)}}}>Reject</DefaultButton>
-							<DefaultButton theme="warning"  width={40} btnProps={{onPress: () => {sendTransaction(true)}}}>Allow</DefaultButton>
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {sendTransaction(false)}}}>Reject</DefaultButton>
+							<DefaultButton width={40} btnProps={{onPress: () => {sendTransaction(true)}}}>Allow</DefaultButton>
 						</Wrap>
 					</Modal>
 				)
@@ -1118,8 +1118,8 @@ const WalletConnectDetect =  () => {
 						}
 						
 						<Wrap style={{...grid.btnGroup, justifyContent:'space-around', marginTop: h(1)}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {signTransactionData(false)}}}>Reject</DefaultButton>
-							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {signTransactionData(true)}}}>Allow</DefaultButton>
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {signTransactionData(false)}}}>Reject</DefaultButton>
+							<DefaultButton width={40} btnProps={{onPress: () => {signTransactionData(true)}}}>Allow</DefaultButton>
 						</Wrap>
 					</Modal>
 				)

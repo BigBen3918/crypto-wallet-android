@@ -83,7 +83,8 @@ export default function ({route,  navigation }: any) {
 			}
 			title="Confirm secret recovery phrase"
 		>
-			<Content style={gstyle.textLightCenter}>Select each word in the order it was presented to you.</Content>
+			<Content style={gstyle.textLightCenter}>Select each word in the order it was </Content>
+			<Content style={gstyle.textLightCenter}>presented to you.</Content>
 			<Wrap style={{...grid.panel}}>
 				<Wrap style={grid.rowCenter}>
 					{status.mnemonic.map((i:string, k: number) => {
@@ -103,7 +104,7 @@ export default function ({route,  navigation }: any) {
 													borderWidth: w(0.2),
 													borderRadius: w(2),
 													borderStyle: status.selectedItems[k + kk] !== "" ? "solid" : "dashed",
-													borderColor: (status.selectedItems[k + kk] !== "" || status.focusIndex === k + kk) ? colors.warning : colors.bgSecondary
+													borderColor: (status.selectedItems[k + kk] !== "" || status.focusIndex === k + kk) ? colors.bgButton : colors.bgSecondary
 												}}
 											>
 												<Content style={gstyle.labelWhite}>{status.selectedItems.length >= (k + kk + 1) ? status.selectedItems[k + kk] : ""}</Content>
@@ -155,7 +156,7 @@ export default function ({route,  navigation }: any) {
 						<Wrap 
 							style={{
 								...grid.rowCenterCenter,
-								borderColor: colors.warning,
+								borderColor: colors.bgButton,
 								borderWidth: w(0.2),
 								paddingLeft: w(5),
 								paddingRight: w(5),
@@ -163,7 +164,7 @@ export default function ({route,  navigation }: any) {
 							}}
 						>
 							<Wrap style={{marginTop: h(1.5)}}>
-								<Icon.Check color={colors.warning} />
+								<Icon.Check color={colors.bgButton} />
 							</Wrap>
 							<Content style={gstyle.link}>SUCCESS!</Content>
 						</Wrap>

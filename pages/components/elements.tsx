@@ -18,13 +18,15 @@ export const DefaultInput = ({ label, inputProps, visibleValue, children, warnin
 		flex: 1,
 		color: colors.white,
 		height: h(8),
-		borderWidth: 1,
+		borderWidth: w(0.05),
+		borderColor: colors.color,
 		borderRadius: w(1),
 		paddingTop: h(2),
 		paddingBottom: h(2),
 		paddingRight: w(3),
 		paddingLeft: w(3),
 		backgroundColor: "rgba(0,0,0, 0.8)",
+		
 	};
 	Object.assign(st2, style)
 
@@ -67,7 +69,10 @@ export const ImageInput = ({ icon, inputProps, iconProps }
 			style={{
 				...grid.rowCenterCenter,
 				...grid.gridMargin2,
-				backgroundColor: 'rgba(0, 0, 0, 0.8)'
+				backgroundColor: 'rgba(0, 0, 0, 0.8)',
+				borderRadius: w(1),
+				borderColor: colors.color,
+				borderWidth: w(0.05)
 			}}
 		>
 			<Wrap
@@ -100,11 +105,11 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 		init: {
 			origin: colors.bgButton,
 			disabled: colors.bgDisable,
-			color: colors.color,
+			color: colors.black,
 			colorDisabled: colors.colorDisable
 		},
 		warning: {
-			origin: colors.warning,
+			origin: colors.black,
 			disabled: colors.bgDisable,
 			color: colors.bgButton,
 			colorDisabled: colors.colorDisable
@@ -121,7 +126,7 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 		<Wrap style={{
 			flex: 1,
 			maxWidth: block ? w(90) : (width ? w(width) : w(60)),
-			height: height ? h(height) : h(8),
+			height: height ? h(height) : h(7),
 			marginBottom: !hideMargin ? h(2): 0,
 			marginLeft: w(0.1),
 			marginRight: w(0.1),
@@ -129,8 +134,8 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 			borderColor: colors.color,
 			shadowColor: colors.shadow,
 			shadowOffset: {
-				width: w(2),
-				height: h(2),
+				width: w(5),
+				height: h(5),
 			},
 			shadowOpacity: 1,
 			elevation: 5,
@@ -142,8 +147,8 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 					flex: 1,
 					paddingLeft: w(0.6),
 					paddingRight: w(0.6),
-					paddingTop: h(0.6),
-					paddingBottom: h(0.6),
+					paddingTop: h(0.4),
+					paddingBottom: h(0.4),
 					borderRadius: w(10),
 					shadowColor: colors.shadow,
 					shadowOffset: {
@@ -159,7 +164,7 @@ export const DefaultButton = ({ btnProps, children, block, width, height, hideMa
 				<Content style={{
 					...gfont.t,
 					flex: 1,
-					color: !btnProps?.disabled ? themeColors[theme].color : "#888",
+					color: !btnProps?.disabled ? themeColors[theme].color : themeColors[theme].colorDisabled,
 					textAlign: "center"
 				}}>
 					{children}
@@ -184,11 +189,13 @@ export const FunctionalButton = ({ label, children, btnProps }
 					backgroundColor: colors.bgSecondary,
 					marginBottom: h(1),
 					borderRadius: w(10),
-					shadowColor: "white",
-					shadowOffset: {width: w(3), height:w(3)},
-					shadowOpacity: 1,
-					shadowRadius: 3,
-					elevation: 20
+					shadowColor: "black",
+					shadowOffset: {width: w(13), height:w(13)},
+					shadowOpacity: 100,
+					shadowRadius: w(10),
+					elevation: 20,
+					borderColor: colors.color,
+					borderWidth: w(0.2)
 				}}
 				{...btnProps}
 			>
@@ -214,7 +221,7 @@ export const Stepper = ({data, step}
 								width: w(85 * 2 * 0.388 / len),
 								marginLeft: w(-85 * 0.388 / len),
 								marginRight: w(-85 * 0.388 / len),
-								backgroundColor: (k <= step) ? colors.warning : colors.placeholder
+								backgroundColor: (k <= step) ? colors.bgButton : colors.placeholder
 							}}
 						/>
 					)}
@@ -227,14 +234,14 @@ export const Stepper = ({data, step}
 						<Wrap 
 							style={{
 								...stepper.stepBox,
-								borderColor: (k <= step) ? colors.warning : colors.bgButton,
-								backgroundColor: (k < step) ? colors.warning : colors.color
+								borderColor: (k <= step) ? colors.bgButton : colors.bgButton,
+								backgroundColor: (k < step) ? colors.black : colors.color
 							}}
 						>
 							<Content 
 								style={{
 									...stepper.stepContent,
-									color: (k < step) ? colors.bgButton : ((k >= step ? colors.bgButton : colors.placeholder))
+									color: (k < step) ? colors.bgButton : ((k >= step ? colors.black : colors.placeholder))
 								}}
 							>
 								{k + 1}
@@ -242,7 +249,7 @@ export const Stepper = ({data, step}
 						</Wrap>
 						<Content style={{
 							...stepper.label,
-							color: (k <= step) ? colors.warning : colors.color,
+							color: (k <= step) ? colors.bgButton : colors.color,
 						}}>
 							{i.label}
 						</Content>

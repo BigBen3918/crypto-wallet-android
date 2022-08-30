@@ -1,7 +1,7 @@
 import React from "react";
 import AuthLayout from "../layouts/AuthLayout";
 import { Content,  Wrap } from "../components/commons";
-import { colors, grid, gstyle } from "../components/style";
+import { colors, grid, gstyle, h } from "../components/style";
 import { DefaultButton, DefaultInput, Stepper } from "../components/elements";
 import useStore, { hmac } from "../../useStore";
 
@@ -42,7 +42,7 @@ export default function ({ route, navigation }: any) {
 			}
 			title="Confirm your password"
 		>
-			<Content style={gstyle.textLightCenter}>Before continuing we need you to confirm your password</Content>
+			<Content style={{...gstyle.textLightCenter, marginTop: h(5)}}>Before continuing we need you to confirm your password</Content>
 			<Wrap>
 				<Wrap>
 					<DefaultInput

@@ -8,18 +8,18 @@ export const h = (h: number) => hp(h + '%')
 
 export const colors = {
 	bgSecondary: "rgba(0,0,0, 0.9)",
-	bgButton: "#230603",
+	bgButton: "#9f834f",
 	bgOpacity: "rgba(0, 0, 0, 0.505)",
 	bgLight: "rgba(0, 0, 0, 0.6)",
 	bgModal: "rgba(0,0,0, 0.9)",
 	bg: "rgba(0, 0, 0, 0.605)",
-	bgDisable: "#2f0f03",
+	bgDisable: "#7f734f",
 	warning: "#B7E02D",
-	danger: "red",
+	danger: "#c2076c",
 	black: "black",
 	white: "#ffffff",
-	color: "#e9ad56",
-	colorDisable: "#888",
+	color: "#a0844f",
+	colorDisable: "#333",
 
 	border: "rgba(255, 255, 255, 0.2)",
 	shadow: "#e6a54b",
@@ -143,7 +143,10 @@ export const grid = StyleSheet.create({
 		paddingTop: h(1),
 		paddingBottom: h(3),
 		width: w(90),
-		maxHeight: h(85)
+		maxHeight: h(85),
+		borderColor: colors.color,
+		borderRadius: w(2),
+		borderWidth:w(0.08)
 	},
 	modalContent: {
 		paddingTop: h(2),

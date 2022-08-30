@@ -337,8 +337,8 @@ export default function ({ route,  navigation }: ConfirmSendingProps) {
 							</>
 						}
 						<Wrap style={{...grid.btnGroup, marginTop: h(1), justifyContent:'space-around'}}>
-							<DefaultButton theme="danger" width={40} btnProps={{onPress: () => {makeTransaction(false)}}}>Reject</DefaultButton>
-							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {makeTransaction(true)}}}>Allow</DefaultButton>
+							<DefaultButton theme="warning" width={40} btnProps={{onPress: () => {makeTransaction(false)}}}>Reject</DefaultButton>
+							<DefaultButton width={40} btnProps={{onPress: () => {makeTransaction(true)}}}>Allow</DefaultButton>
 						</Wrap>
 					</Wrap>
 				</Wrap>

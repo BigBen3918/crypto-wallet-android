@@ -93,7 +93,7 @@ export default function ({ navigation }: any) {
 						</Wrap>
 						<Content style={gstyle.textLight}>Protect your wallet by saving your Secret Recovery Phrase in various places like on a piece of paper, password manager and/or the cloud.</Content>
 						<Wrap style={grid.gridMargin2}>
-							<DefaultButton width={90} theme="warning" btnProps={{ onPress: ()=>navigation.navigate("RevealPhrase")}}>REVEAL SECRET RECOVERY PHRASE</DefaultButton>
+							<DefaultButton width={90}  btnProps={{ onPress: ()=>navigation.navigate("RevealPhrase")}}>REVEAL SECRET RECOVERY PHRASE</DefaultButton>
 						</Wrap>
 					</Wrap>
 					<Wrap style={gstyle.hr2} />

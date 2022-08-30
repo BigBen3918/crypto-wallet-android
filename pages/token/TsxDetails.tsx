@@ -31,7 +31,7 @@ export default function ({route, navigation}: {route: any, navigation: any}) {
 				<Wrap style={{...grid.rowCenter, marginLeft: w(5)}}>
 					<OpacityButton style={grid.rowCenter} onPress={() => navigation.goBack()}>
 						<Wrap style={{marginRight: w(1)}}>
-							<Icon.ArrowLeft color={colors.warning} width={w(4)} height={w(4)} />
+							<Icon.ArrowLeft color={colors.color} width={w(4)} height={w(4)} />
 						</Wrap>
 						<Content style={gstyle.link}>Back</Content>
 					</OpacityButton>
@@ -41,7 +41,7 @@ export default function ({route, navigation}: {route: any, navigation: any}) {
 			<Wrap style={{paddingLeft: w(5), paddingRight: w(5)}}>
 				<Wrap style={{...grid.rowCenterCenter}}>
 					<Content style={gstyle.labelWhite}>STATUS: </Content>
-					<Content style={{...gstyle.labelWhite, color: colors.placeholder}}>{tx.status}</Content>
+					<Content style={{...gstyle.labelWhite, color: colors.danger}}>{tx.status}</Content>
 				</Wrap>
 				<OpacityButton onPress={() => {viewOnExplorer()}}><Content style={{...gstyle.textCenter, color:colors.warning, marginBottom: h(1)}}>View on explorer</Content></OpacityButton>
 				<OpacityButton onPress={() => {copyToClipboard(tx.transactionId); showToast("Copied transaction id")}}><Content style={{...gstyle.textCenter, color:colors.warning, marginBottom: h(1)}}>Copy to Transaction ID</Content></OpacityButton>

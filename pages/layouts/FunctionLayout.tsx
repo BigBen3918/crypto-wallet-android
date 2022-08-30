@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "../components/Icon"
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/icicb_mark.png'
 import NetworkModal from "./NetworkModal"
 import Avatar from "../components/avatar"
 import AccountModal from "./AccountModal"
@@ -40,7 +40,7 @@ export default function ({ navigation, title, hideClose, content, children, onBa
 			<Wrap style={gstyle.body}>
 				<Wrap style={style.header}>
 					<OpacityButton onPress={() => navigation.navigate("WalletTokens")}>
-						<Picture source={Logo} style={{ width: w(20), height: w(8) }} />
+						<Picture source={Logo} style={{ width: w(8), height: w(9) }} />
 					</OpacityButton>
 					<Wrap style={style.content}>
 						<OpacityButton style={style.network} onPress={() => updateStatus({networkModal: true})}>
@@ -63,8 +63,8 @@ export default function ({ navigation, title, hideClose, content, children, onBa
 						style={{...grid.rowCenterEnd, marginTop: h(-2), paddingLeft: w(2), paddingRight: w(2)}} 
 						onPress={onBack}
 					>
-						<Content style={gstyle.labelWhite}>CANCEL</Content>
-						<Wrap style={{paddingTop: h(2), marginLeft: w(1)}}><Icon.X width={w(7)} height={w(7)} color={colors.danger} /></Wrap>
+						<Content style={{...gstyle.labelWhite,  backgroundColor: colors.color, borderRadius: w(5), color:colors.black, padding: w(3), paddingBottom: w(1), paddingTop: w(1)}}>Cancel</Content>
+						{/* <Wrap style={{paddingTop: h(2), marginLeft: w(1)}}><Icon.X width={w(7)} height={w(7)} color={colors.danger} /></Wrap> */}
 					</OpacityButton>
 				)}
 				<ScrollWrap style={gstyle.container} contentContainerStyle={gstyle.scrollviewContainer}>

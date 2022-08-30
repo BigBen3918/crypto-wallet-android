@@ -254,10 +254,10 @@ export default function ({ navigation }: any) {
 				>
 					<Wrap style={{...grid.rowCenterAround, ...grid.gridMargin2}}>
 						<OpacityButton style={{flex: 1, borderBottomWidth: h(0.1), borderColor: (status.tabKey === "popular" ? colors.color : colors.border)}} onPress={() => updateStatus({tabKey: "popular"})}>
-							<Content style={gstyle.textLightCenter}>// Import</Content>
+							<Content style={gstyle.textLightCenter}>Import</Content>
 						</OpacityButton>
 						<OpacityButton style={{flex: 1, borderBottomWidth: h(0.1), borderColor: (status.tabKey === "custom" ? colors.color : colors.border)}} onPress={() => updateStatus({tabKey: "custom"})}>
-							<Content style={gstyle.textLightCenter}>// Customize</Content>
+							<Content style={gstyle.textLightCenter}>Customize</Content>
 						</OpacityButton>
 					</Wrap>
 					{status.tabKey === "popular" && (
@@ -340,8 +340,8 @@ export default function ({ navigation }: any) {
 								}}
 							/>
 							<Wrap style={{...grid.btnGroup, justifyContent:'space-around'}}>
-								<DefaultButton width={40} btnProps={{onPress: () => updateStatus({inputName:"", inputRpc:"", inputSymbol:"", inputExplorer: "", inputChainId: "", showAddModal: false})}}>Cancel</DefaultButton>
-								<DefaultButton width={40} btnProps={{onPress: () => addNetwork()}} theme="warning">Add</DefaultButton>
+								<DefaultButton width={40} theme="warning" btnProps={{onPress: () => updateStatus({inputName:"", inputRpc:"", inputSymbol:"", inputExplorer: "", inputChainId: "", showAddModal: false})}}>Cancel</DefaultButton>
+								<DefaultButton width={40} btnProps={{onPress: () => addNetwork()}} >Add</DefaultButton>
 							</Wrap>
 						</>
 					)}

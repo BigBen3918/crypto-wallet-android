@@ -1,7 +1,7 @@
 import React from "react"
 import Icon from "../components/Icon"
-import Logo from '../../assets/logo.png'
-import { gstyle, h, w } from "../components/style"
+import Logo from '../../assets/icicb_logo.png'
+import { colors, gstyle, h, w } from "../components/style"
 import { authLayout as style } from "../components/StyledComponents"
 import { BgImage, Content, OpacityButton, Picture, ScrollWrap, Wrap } from "../components/commons"
 
@@ -38,7 +38,7 @@ export default function ({ title, content, children, onBack, footer }: AuthLayou
 				<ScrollWrap style={style.container} contentContainerStyle={gstyle.scrollviewContainer}>
 					{ content && content }
 					{ title && (
-						<Content style={gstyle.title}>{title}</Content>
+						<Content style={{...gstyle.title, color:colors.white}}>{title}</Content>
 					)}
 					{children}
 				</ScrollWrap>

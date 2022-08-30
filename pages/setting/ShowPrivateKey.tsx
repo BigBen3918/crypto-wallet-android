@@ -91,7 +91,7 @@ export default function ({ navigation } : any) {
 											{status.privKey}
 										</Content>
 										<Wrap style={{...grid.btnGroup, marginTop:h(2)}}>
-											<DefaultButton  btnProps={{onPress: () => {copyToClipboard(status.privKey); showToast("Copied private key")}}}>Copy</DefaultButton>
+											<DefaultButton theme="warning"  btnProps={{onPress: () => {copyToClipboard(status.privKey); showToast("Copied private key")}}}>Copy</DefaultButton>
 										</Wrap>
 									</Wrap>
 								</>
@@ -106,11 +106,11 @@ export default function ({ navigation } : any) {
 					<Wrap style={{...grid.btnGroup, justifyContent:"space-around"}}>
 						{ !status.showKey ? (
 							<>
-								<DefaultButton width={40} btnProps={{onPress: () => navigation?.navigate("Security")}}>Cancel</DefaultButton>
-								<DefaultButton width={40} theme="warning" btnProps={{onPress: () => confirmPassword()}}>Next</DefaultButton>
+								<DefaultButton width={40} theme="warning" btnProps={{onPress: () => navigation?.navigate("Security")}}>Cancel</DefaultButton>
+								<DefaultButton width={40}  btnProps={{onPress: () => confirmPassword()}}>Next</DefaultButton>
 							</>
 						) : (
-							<DefaultButton theme="warning" btnProps={{onPress: () => navigation?.navigate("Security")}}>Done</DefaultButton>
+							<DefaultButton  btnProps={{onPress: () => navigation?.navigate("Security")}}>Done</DefaultButton>
 						)}
 					</Wrap>
 				</ScrollWrap>

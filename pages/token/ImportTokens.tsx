@@ -187,10 +187,10 @@ export default function ({ navigation }: any) {
 						<Wrap style={{flex: 1, width: w(100)}}>
 							<Wrap style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
 								<OpacityButton style={{flex: 1, borderBottomWidth: h(0.1), borderColor: (status.tabKey === 0 ? colors.color : colors.border)}} onPress={() => setStatus({...status, tabKey: 0})}>
-									<Content style={gstyle.textLightCenter}>// SEARCH</Content>
+									<Content style={gstyle.textLightCenter}>SEARCH</Content>
 								</OpacityButton>
 								<OpacityButton style={{flex: 1, borderBottomWidth: h(0.1), borderColor: (status.tabKey === 1 ? colors.color : colors.border)}} onPress={() => setStatus({...status, tabKey: 1})}>
-									<Content style={gstyle.textLightCenter}>// CUSTOM TOKEN</Content>
+									<Content style={gstyle.textLightCenter}>CUSTOM TOKEN</Content>
 								</OpacityButton>
 							</Wrap>
 							<ScrollWrap>
@@ -207,7 +207,7 @@ export default function ({ navigation }: any) {
 											</Wrap>
 											<Wrap style={{marginBottom: h(3)}}>
 												<ImageInput
-													icon={<Icon.Search color={colors.placeholder} />} 
+													icon={<Icon.Search color={colors.bgButton} width={w(5)}/>} 
 													inputProps={{
 														placeholder: "Search Tokens",
 														onChangeText: (txt:string) => checkToken(txt),
@@ -264,7 +264,6 @@ export default function ({ navigation }: any) {
 												label="Token Symbol"
 												visibleValue={false}
 												inputProps={{
-													placeholder: "GNO",
 													value:	  status.symbol2,
 													editable: false,
 													style:{borderColor: colors.color, borderWidth: w(0.1)}
@@ -274,7 +273,6 @@ export default function ({ navigation }: any) {
 												label="Token Decimals"
 												visibleValue={false}
 												inputProps={{
-													placeholder: "18",
 													value:	status.decimals2,
 													editable: false,
 													style:{borderColor: colors.color, borderWidth: w(0.1)}
