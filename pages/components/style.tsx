@@ -146,7 +146,7 @@ export const grid = StyleSheet.create({
 		maxHeight: h(85),
 		borderColor: colors.color,
 		borderRadius: w(2),
-		borderWidth:w(0.08)
+		borderWidth:w(0.1)
 	},
 	modalContent: {
 		paddingTop: h(2),

@@ -149,7 +149,7 @@ export default function ({route, navigation }: any) {
 						status.tokenAddress !== ZeroAddress && <>
 							{
 								currentNetwork === "rinkeby" ? (tokenIcons[status.tokenAddress] ?  
-									<Picture source={{uri: tokenIcons[status.tokenAddress]}} style={{width: w(18), height: w(18), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
+									<Picture source={{uri: tokenIcons[status.tokenAddress]}} style={{width: w(18), height: w(18), borderRadius: w(80)}} resizeMode="stretch" resizeMethod="scale" />
 									:
 									<Avatar address={status.tokenAddress} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={12}/>
 								) :
@@ -167,7 +167,7 @@ export default function ({route, navigation }: any) {
 										  <SvgUri width={"40"} height={"40"} source={{uri:icons[network.chainId]}}
 											/>
 									</Wrap>: 
-										<Picture source={{uri: icons[network.chainId]}} style={{width: w(18), height: w(18), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
+										<Picture source={{uri: icons[network.chainId]}} style={{width: w(14), height: w(14), borderRadius: w(80)}} resizeMode="stretch" resizeMethod="scale" />
 									)
 									:
 									<Avatar address={currentNetwork} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={12}/>

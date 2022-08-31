@@ -188,7 +188,7 @@ export const FunctionalButton = ({ label, children, btnProps }
 					height: h(10),
 					backgroundColor: colors.bgSecondary,
 					marginBottom: h(1),
-					borderRadius: w(10),
+					borderRadius: w(80),
 					shadowColor: "black",
 					shadowOffset: {width: w(13), height:w(13)},
 					shadowOpacity: 100,

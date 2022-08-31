@@ -189,7 +189,7 @@ export default function ({ navigation }: any) {
 																  <SvgUri width={"25"} height={"25"} source={{uri:icons[network.chainId]}}
 																	/>
 															</Wrap>: 
-																<Picture source={{uri: icons[network.chainId]}} style={{width: w(7), height: w(7), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
+																<Picture source={{uri: icons[network.chainId]}} style={{width: w(7), height: w(7), borderRadius: w(80)}} resizeMode="stretch" resizeMethod="scale" />
 															)
 															:
 															<Avatar address={currentNetwork} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={8}/>
@@ -240,7 +240,7 @@ export default function ({ navigation }: any) {
 																						<SvgUri width={"25"} height={"25"} source={{uri: tokenIcons[key]}}
 																							/>
 																					</Wrap>: 
-																						<Picture source={{uri: tokenIcons[key] }} style={{width: w(7), height: w(7), borderRadius: w(10)}} resizeMode="stretch" resizeMethod="scale" />
+																						<Picture source={{uri: tokenIcons[key] }} style={{width: w(7), height: w(7), borderRadius: w(80)}} resizeMode="stretch" resizeMethod="scale" />
 																					)
 																					:
 																					<Avatar address={key || ZeroAddress} type={setting.identicon === 'jazzicons'? "Zazzicon": "Blockies"} size={8}/>
