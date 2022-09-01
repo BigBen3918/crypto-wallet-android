@@ -1,9 +1,10 @@
 import React from "react"
 import AuthLayout from "../layouts/AuthLayout";
 import Icon from "../components/Icon";
-import { Content, Wrap } from "../components/commons";
+import { Content, Picture, Wrap } from "../components/commons";
 import { colors, grid, gstyle, h, w } from "../components/style";
 import { DefaultButton, ImageInput } from "../components/elements";
+import Logo from '../../assets/icicb_logo.png'
 
 export default function ({ navigation }: any) {
 	const goBack = () => { 
@@ -20,7 +21,7 @@ export default function ({ navigation }: any) {
 			content={
 				<>
 					<Wrap style={{...grid.rowCenterCenter, marginBottom: h(-2)}}>
-						<Icon.Logo color={colors.warning} width={w(10)} height={w(10)} />
+						<Picture source={Logo} style={{width:w(25), height:w(10)}}/>
 					</Wrap>
 				</>
 			}

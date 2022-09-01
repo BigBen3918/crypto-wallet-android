@@ -1,14 +1,14 @@
 import React from "react"
 import { Loading } from "./elements"
 import { gstyle, h, w } from "./style"
-import { BgImage,  Content,  Wrap } from "./commons"
-import Icon from "./Icon"
+import { BgImage,  Content,  Picture,  Wrap } from "./commons"
+import Logo from '../../assets/icicb_logo.png'
 
 export const LoadScreen = () => {
 	return <Wrap>
 				<Wrap style={{...gstyle.subContainer, alignItems:'center'}}>
 					<Wrap style={{marginTop:h(20)}}> 
-							<Icon.SmLogo width={w(20)} height={w(20)} />
+						<Picture source={Logo} style={{width:w(25), height:w(10)}}/>
 					</Wrap>
 					<Content style={gstyle.title}>ICICB Wallet</Content>
 				</Wrap>

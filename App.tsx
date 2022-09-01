@@ -242,9 +242,6 @@ const AppContainer = () => {
 		return () => clearTimeout(timer)
 	}, [time, currentNetwork, transactions])
 
-	React.useEffect(() => {
-		
-	}, [connects])
 
 	return (
 		<NavigationContainer ref={navigationRef}>

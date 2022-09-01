@@ -11,11 +11,13 @@ import { FunctionalButton } from "../components/elements"
 import { ZeroAddress } from "../../library/wallet"
 import { formatUnit } from "../../library/bigmath"
 import useStore, { copyToClipboard, ellipsis, getChainIcon, getTokenIcon, initChainIcons, initTokenIcons, roundNumber, toDate } from '../../useStore'
+import DepositModal from "../layouts/DepositModal";
 
 interface WalletTokenStatus {
 	showMenu:	  	boolean
 	copiedModal:	boolean
 	accountModal:   boolean
+	depositModal:	boolean
 	tokenAddress:   string
 	balance:		string
 	symbol:		 	string
@@ -32,6 +34,7 @@ export default function ({route, navigation }: any) {
 		showMenu:			false,
 		copiedModal:		false,
 		accountModal:		false,
+		depositModal:		false,
 		tokenAddress:		ZeroAddress,
 		balance:			"0",
 		symbol:				"",
@@ -82,6 +85,12 @@ export default function ({route, navigation }: any) {
 		txs = txs.sort((a, b) => {return a.time>b.time? -1: 1})
 		updateStatus({txs: txs, symbol, tokenAddress: tokenAddress, balance})
 	}
+
+	
+	const walletConnect = () => {
+		navigation.navigate("WalletconnectCapture")
+	}
+
 
 	React.useEffect(() => {
 		checkTokenStatus()
@@ -180,14 +189,14 @@ export default function ({route, navigation }: any) {
 						{roundNumber(formatUnit(status.balance || '0', 18), 8)} {status.symbol}
 					</Content> 
 					<Wrap style={{alignSelf: "center", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", width: w(80), marginTop:h(2), marginBottom: h(3)}}>
-						<FunctionalButton label="Buy" btnProps={{disabled: true}}>
+						<FunctionalButton label="Deposit" btnProps={{onPress: ()=> {updateStatus({depositModal: true})}}}>
 							<Icon.Receive color={colors.color} />
 						</FunctionalButton>
-						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: status.tokenAddress, tokenId: "", selectedNftIndex: 0})}}>
+						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: ZeroAddress, tokenId: "", selectedNftIndex: 0})}}>
 							<Icon.Send color={colors.color} />
 						</FunctionalButton>
-						<FunctionalButton label="Swap" btnProps={{disabled: true}}>
-							<Icon.Swap color={colors.color} />
+						<FunctionalButton label="Scan" btnProps={{onPress: ()=>{walletConnect()}}}>
+							<Icon.Search color={colors.color} />
 						</FunctionalButton>
 					</Wrap>
 					<Wrap style={grid.colBetween}>
@@ -232,6 +241,10 @@ export default function ({route, navigation }: any) {
 			</FunctionLayout>
 			{status.accountModal && (
 				<AccountModal close={() => updateStatus({accountModal: false})}  navigation={navigation}/>
+			)}
+			
+			{status.depositModal && (
+				<DepositModal close={() => updateStatus({depositModal: false})} />
 			)}
 			{status.copiedModal && (
 				<CopiedModal close={() => updateStatus({copiedModal: false})} />

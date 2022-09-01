@@ -181,14 +181,14 @@ export const FunctionalButton = ({ label, children, btnProps }
 		<Wrap style={{
 			opacity: btnProps?.disabled ? 0.3 : 1
 		}}>
-			<OpacityButton 
+			<OpacityButton 	
 				style={{
 					...grid.rowCenterCenter,
 					width: w(18),
-					height: h(10),
+					height: w(18),
 					backgroundColor: colors.bgSecondary,
 					marginBottom: h(1),
-					borderRadius: w(80),
+					borderRadius: w(100),
 					shadowColor: "black",
 					shadowOffset: {width: w(13), height:w(13)},
 					shadowOpacity: 100,

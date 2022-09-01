@@ -75,9 +75,6 @@ export default function ({ navigation, menuKey, title, content, children, footer
 		})
 	}
 
-	const walletConnect = () => {
-		navigation.navigate("WalletconnectCapture")
-	}
 
 	const setAccountName = () => {
 		if(status.accountLabel.trim() === "") return showToast("Enter account label", "warning")
@@ -109,9 +106,10 @@ export default function ({ navigation, menuKey, title, content, children, footer
 						<OpacityButton style={{paddingLeft: w(0)}} onPress={() => navigation.navigate("WalletTokens")}>
 							<Picture source={Logo} style={{ width: w(24), height: w(9) }} />
 						</OpacityButton>
-						<OpacityButton onPress={walletConnect}>
+						<Wrap style={{ width: w(6), height: w(6) }}></Wrap>
+						{/* <OpacityButton onPress={walletConnect}>
 							<Picture source={Search} style={{ width: w(6), height: w(6) }} />
-						</OpacityButton>
+						</OpacityButton> */}
 					</Wrap>
 					:
 					<Wrap style={{marginTop:h(5)}}></Wrap>

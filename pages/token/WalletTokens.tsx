@@ -8,6 +8,7 @@ import Icon from "../components/Icon"
 import Avatar from "../components/avatar"
 import NetworkModal from "../layouts/NetworkModal"
 import AccountModal from "../layouts/AccountModal"
+import DepositModal from "../layouts/DepositModal"
 import CopiedModal from "../layouts/CopiedModal"
 import { formatUnit } from "../../library/bigmath"
 import { ZeroAddress } from "../../library/wallet"
@@ -20,6 +21,7 @@ interface WalletTokenStatus {
 	copiedModal:			boolean
 	accountModal:			boolean
 	networkModal:			boolean
+	depositModal:			boolean
 	showChangeAccountNameModal: boolean
 	accountLabel:			string
 	nftFlags:				boolean[]
@@ -36,6 +38,7 @@ export default function ({ navigation }: any) {
 		showMenu:		false,
 		copiedModal:	false,
 		accountModal:	false,
+		depositModal:	false,
 		networkModal:	false,
 		showChangeAccountNameModal: false,
 		accountLabel:	"",
@@ -68,6 +71,11 @@ export default function ({ navigation }: any) {
 
 	const showNFT = (index: number) => {
 		updateStatus({showNftModal: true, selectedNft: index})
+	}
+
+	
+	const walletConnect = () => {
+		navigation.navigate("WalletconnectCapture")
 	}
 
 	React.useEffect(() => {
@@ -136,8 +144,7 @@ export default function ({ navigation }: any) {
 						</Content>
 					</OpacityButton>
 					<Wrap style={grid.rowCenterBetween}>
-						<Wrap style={gstyle.hr} />
-						<Content style={gstyle.labelWhite}>
+						<Content style={{...gstyle.labelWhite, margin: h(1)}}>
 							{Object.values(accounts).map((account) => {
 								if(account.address === currentAccount) {
 									return roundNumber(formatUnit(account.value[currentNetwork]  || "0", 18), 8)
@@ -149,20 +156,19 @@ export default function ({ navigation }: any) {
 								}})
 							}
 						</Content>
-						<Wrap style={gstyle.hr} />
 					</Wrap>
 					<OpacityButton style={style.key} onPress={() => {copyToClipboard(currentAccount); updateStatus({ copiedModal: true})}}>
 						<Content style={gstyle.labelWhite}>{ellipsis(currentAccount)}</Content>
 					</OpacityButton>
 					<Wrap style={style.btnWrapper}>
-						<FunctionalButton label="Buy" btnProps={{disabled: true}}>
+						<FunctionalButton label="Deposit" btnProps={{onPress: ()=> {updateStatus({depositModal: true})}}}>
 							<Icon.Receive color={colors.color} />
 						</FunctionalButton>
 						<FunctionalButton label="Send" btnProps={{onPress: ()=>navigation.navigate("Send", {page: "money", tokenAddress: ZeroAddress, tokenId: "", selectedNftIndex: 0})}}>
 							<Icon.Send color={colors.color} />
 						</FunctionalButton>
-						<FunctionalButton label="Swap" btnProps={{disabled: true}}>
-							<Icon.Swap color={colors.color} />
+						<FunctionalButton label="Scan" btnProps={{onPress: ()=>{walletConnect()}}}>
+							<Icon.Search color={colors.color} />
 						</FunctionalButton>
 					</Wrap>
 					<Wrap style={grid.colBetween}>
@@ -321,6 +327,9 @@ export default function ({ navigation }: any) {
 			</WalletLayout>
 			{status.copiedModal && (
 				<CopiedModal close={() => updateStatus({copiedModal: false})} />
+			)}
+			{status.depositModal && (
+				<DepositModal close={() => updateStatus({depositModal: false})} />
 			)}
 			{status.accountModal && (
 				<AccountModal close={() => updateStatus({accountModal: false})} navigation={navigation} />
