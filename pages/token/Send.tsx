@@ -79,11 +79,11 @@ export default function ({ route, navigation }: any) {
 											{Object.entries(accounts).map(([index, account]) => {
 												if(account.address === currentAccount) {
 													return <Content style={gstyle.labelWhite} key={"ak " + index}>
-														{ellipsis(account.label, 15)}
+														{ellipsis(account.label, 8)}
 													</Content>
 												}
 											})}  
-											<Content style={gstyle.labelSm}>{ellipsis(currentAccount, 30)}</Content>
+											<Content style={gstyle.labelWhite}>{ellipsis(currentAccount, 10)}</Content>
 										</Wrap>
 									</OpacityButton>
 								</Wrap>
@@ -122,9 +122,7 @@ export default function ({ route, navigation }: any) {
 
 						<Wrap style={{...grid.rowCenterCenter, paddingBottom: h(2)}}>
 							<Wrap style={{flex: 1}}>
-								{recents.length > 0 && <Content style={{...gstyle.labelWhite, paddingLeft: w(5)}}>Recen
-								
-								ts</Content>}
+								{recents.length > 0 && <Content style={{...gstyle.labelWhite, paddingLeft: w(5)}}>Recents</Content>}
 								{
 									recents.map((account, index) => {
 										if(account !== currentAccount) return <Wrap key={"ab" + index}>
@@ -135,7 +133,7 @@ export default function ({ route, navigation }: any) {
 														<Avatar address={account} type={setting.identicon === "jazzicons" ? "Zazzicon" : "Blockies"} size={8}/>
 													</Wrap>
 													<Wrap style={{flex: 1}}>
-														<Content style={gstyle.labelSm}>{ellipsis(account, 36)}</Content>
+														<Content style={gstyle.labelWhite}>{ellipsis(account, 15)}</Content>
 													</Wrap>
 												</OpacityButton>
 											</Wrap>
@@ -161,7 +159,7 @@ export default function ({ route, navigation }: any) {
 												<Content style={gstyle.labelWhite}>
 													{ellipsis(account.label)}
 												</Content>
-												<Content style={gstyle.labelSm}>{ellipsis(account.address, 36)}</Content>
+												<Content style={gstyle.labelWhite}>{ellipsis(account.address, 12)}</Content>
 											</Wrap>
 										</OpacityButton>
 									</Wrap>
@@ -184,7 +182,7 @@ export default function ({ route, navigation }: any) {
 														<Content style={gstyle.labelWhite}>
 															{ellipsis(account.label)}
 														</Content>
-														<Content style={gstyle.labelSm}>{ellipsis(account.address, 36)}</Content>
+														<Content style={gstyle.labelWhite}>{ellipsis(account.address, 10)}</Content>
 													</Wrap>
 												</OpacityButton>
 											</Wrap>

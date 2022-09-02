@@ -146,8 +146,8 @@ export default function ({route, navigation }: any) {
 								})}  
 							</Content>
 							<OpacityButton style={grid.rowCenter} onPress={() => {copyToClipboard(currentAccount); updateStatus({copiedModal: true})}}>
-								<Content style={{...gstyle.textCenter, ...gstyle.labelSm}}>{ellipsis(currentAccount, 15)}</Content>
-								<Wrap style={{marginLeft: w(2)}}><Icon.Copy color="white" width={w(3)} /></Wrap>
+								<Content style={{...gstyle.textCenter, ...gstyle.label, marginBottom: 0}}>{ellipsis(currentAccount)}</Content>
+								<Wrap style={{marginLeft: w(2)}}><Icon.Copy color="white" width={w(5)} /></Wrap>
 							</OpacityButton>
 						</Wrap>
 						<Wrap style={{width: w(5)}}></Wrap>
